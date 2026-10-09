@@ -22,7 +22,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createCarryOver()`
 
 ```php
-createCarryOver($personId, $calculationId, $createCarryOverRequest, $idempotencyKey): \TimecardClient\Model\ListCarryOvers200ResponseItemsInner
+createCarryOver($personId, $calculationId, $createCarryOverRequest, $idempotencyKey): \TimecardClient\Model\CreateCarryOver201Response
 ```
 
 Create a manual carry-over (timeCard user right 223 create)
@@ -68,7 +68,7 @@ try {
 
 ### Return type
 
-[**\TimecardClient\Model\ListCarryOvers200ResponseItemsInner**](../Model/ListCarryOvers200ResponseItemsInner.md)
+[**\TimecardClient\Model\CreateCarryOver201Response**](../Model/CreateCarryOver201Response.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -137,7 +137,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -200,7 +200,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -258,7 +258,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -316,7 +316,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -373,7 +373,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -433,7 +433,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -495,7 +495,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -565,7 +565,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -624,7 +624,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `image/jpeg`
-- **Accept**: Not defined
+- **Accept**: `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -633,7 +633,7 @@ void (empty response body)
 ## `replaceCarryOver()`
 
 ```php
-replaceCarryOver($personId, $calculationId, $balanceId, $createCarryOverRequest): \TimecardClient\Model\ListCarryOvers200ResponseItemsInner
+replaceCarryOver($personId, $calculationId, $balanceId, $createCarryOverRequest): \TimecardClient\Model\CreateCarryOver201Response
 ```
 
 Replace a manual carry-over (the carry-over must exist in the month of balanceDate)
@@ -679,7 +679,7 @@ try {
 
 ### Return type
 
-[**\TimecardClient\Model\ListCarryOvers200ResponseItemsInner**](../Model/ListCarryOvers200ResponseItemsInner.md)
+[**\TimecardClient\Model\CreateCarryOver201Response**](../Model/CreateCarryOver201Response.md)
 
 ### Authorization
 
@@ -688,7 +688,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -748,7 +748,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -808,7 +808,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

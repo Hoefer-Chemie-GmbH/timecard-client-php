@@ -18,6 +18,6 @@ Name | Type | Description | Notes
 **workOperationId** | **int** |  |
 **workOperationName** | **string** |  |
 **comment** | **string** |  |
-**location** | [**\TimecardClient\Model\CreateBooking201ResponseBookingLocation**](CreateBooking201ResponseBookingLocation.md) |  |
+**location** | [**\TimecardClient\Model\GetBooking200ResponseLocation**](GetBooking200ResponseLocation.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

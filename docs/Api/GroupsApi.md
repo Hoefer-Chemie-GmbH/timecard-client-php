@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getGroup()`
 
 ```php
-getGroup($groupId): \TimecardClient\Model\GetDepartment200Response
+getGroup($groupId): \TimecardClient\Model\GetGroup200Response
 ```
 
 Group details
@@ -52,7 +52,7 @@ try {
 
 ### Return type
 
-[**\TimecardClient\Model\GetDepartment200Response**](../Model/GetDepartment200Response.md)
+[**\TimecardClient\Model\GetGroup200Response**](../Model/GetGroup200Response.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -119,7 +119,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -174,7 +174,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

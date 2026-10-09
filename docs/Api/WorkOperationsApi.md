@@ -66,7 +66,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -123,7 +123,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -181,7 +181,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -239,7 +239,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -248,7 +248,7 @@ try {
 ## `listWorkOperations()`
 
 ```php
-listWorkOperations(): \TimecardClient\Model\ListProjectWorkOperations200Response
+listWorkOperations(): \TimecardClient\Model\ListWorkOperations200Response
 ```
 
 All work operations
@@ -285,7 +285,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\TimecardClient\Model\ListProjectWorkOperations200Response**](../Model/ListProjectWorkOperations200Response.md)
+[**\TimecardClient\Model\ListWorkOperations200Response**](../Model/ListWorkOperations200Response.md)
 
 ### Authorization
 
@@ -294,7 +294,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -354,7 +354,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

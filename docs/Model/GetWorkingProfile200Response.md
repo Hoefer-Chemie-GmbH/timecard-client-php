@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **isUsed** | **bool** |  |
 **targetTimeWeekSeconds** | **int** |  |
 **disableStopTime** | **bool** |  |
-**freeFields** | [**\TimecardClient\Model\CreatePerson201ResponseFreeFieldsInner[]**](CreatePerson201ResponseFreeFieldsInner.md) |  |
+**freeFields** | [**\TimecardClient\Model\GetPerson200ResponseFreeFieldsInner[]**](GetPerson200ResponseFreeFieldsInner.md) |  |
 **workingDays** | [**\TimecardClient\Model\GetWorkingProfile200ResponseWorkingDaysInner[]**](GetWorkingProfile200ResponseWorkingDaysInner.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

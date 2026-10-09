@@ -66,7 +66,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -123,7 +123,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -181,7 +181,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -190,7 +190,7 @@ try {
 ## `listAllowedProjects()`
 
 ```php
-listAllowedProjects($personId, $date): \TimecardClient\Model\ListProjects200Response
+listAllowedProjects($personId, $date): \TimecardClient\Model\ListAllowedProjects200Response
 ```
 
 Projects this person may book on a given day
@@ -232,7 +232,7 @@ try {
 
 ### Return type
 
-[**\TimecardClient\Model\ListProjects200Response**](../Model/ListProjects200Response.md)
+[**\TimecardClient\Model\ListAllowedProjects200Response**](../Model/ListAllowedProjects200Response.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -299,7 +299,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -359,7 +359,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
