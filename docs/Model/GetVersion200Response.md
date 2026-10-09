@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**facade_version** | **string** |  |
-**timecard_version** | **string** |  |
+**facadeVersion** | **string** |  |
+**timecardVersion** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

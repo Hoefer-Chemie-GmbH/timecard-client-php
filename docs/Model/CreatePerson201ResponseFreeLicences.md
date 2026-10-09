@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **employee** | **int** |  |
-**access_control** | **int** |  |
+**accessControl** | **int** |  |
 **au** | **int** |  |
 **lohn** | **int** |  |
 

@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createProject()`
 
 ```php
-createProject($create_project_request): \TimecardClient\Model\CreateProject201Response
+createProject($createProjectRequest): \TimecardClient\Model\CreateProject201Response
 ```
 
 Create a project (timeCard user right 213 create)
@@ -37,10 +37,10 @@ $apiInstance = new TimecardClient\Api\ProjectsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_project_request = new \TimecardClient\Model\CreateProjectRequest(); // \TimecardClient\Model\CreateProjectRequest
+$createProjectRequest = new \TimecardClient\Model\CreateProjectRequest(); // \TimecardClient\Model\CreateProjectRequest
 
 try {
-    $result = $apiInstance->createProject($create_project_request);
+    $result = $apiInstance->createProject($createProjectRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->createProject: ', $e->getMessage(), PHP_EOL;
@@ -51,7 +51,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_project_request** | [**\TimecardClient\Model\CreateProjectRequest**](../Model/CreateProjectRequest.md)|  | |
+| **createProjectRequest** | [**\TimecardClient\Model\CreateProjectRequest**](../Model/CreateProjectRequest.md)|  | |
 
 ### Return type
 
@@ -73,7 +73,7 @@ try {
 ## `deleteProject()`
 
 ```php
-deleteProject($project_id)
+deleteProject($projectId)
 ```
 
 Delete a project (timeCard user right 213 delete; a project in use is rejected by timeCard)
@@ -95,10 +95,10 @@ $apiInstance = new TimecardClient\Api\ProjectsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$project_id = 56; // int
+$projectId = 56; // int
 
 try {
-    $apiInstance->deleteProject($project_id);
+    $apiInstance->deleteProject($projectId);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->deleteProject: ', $e->getMessage(), PHP_EOL;
 }
@@ -108,7 +108,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **project_id** | **int**|  | |
+| **projectId** | **int**|  | |
 
 ### Return type
 
@@ -130,7 +130,7 @@ void (empty response body)
 ## `getProject()`
 
 ```php
-getProject($project_id): \TimecardClient\Model\CreateProject201Response
+getProject($projectId): \TimecardClient\Model\CreateProject201Response
 ```
 
 Project details
@@ -152,10 +152,10 @@ $apiInstance = new TimecardClient\Api\ProjectsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$project_id = 56; // int
+$projectId = 56; // int
 
 try {
-    $result = $apiInstance->getProject($project_id);
+    $result = $apiInstance->getProject($projectId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->getProject: ', $e->getMessage(), PHP_EOL;
@@ -166,7 +166,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **project_id** | **int**|  | |
+| **projectId** | **int**|  | |
 
 ### Return type
 
@@ -188,7 +188,7 @@ try {
 ## `listAllowedProjects()`
 
 ```php
-listAllowedProjects($person_id, $date): \TimecardClient\Model\ListProjects200Response
+listAllowedProjects($personId, $date): \TimecardClient\Model\ListProjects200Response
 ```
 
 Projects this person may book on a given day
@@ -210,11 +210,11 @@ $apiInstance = new TimecardClient\Api\ProjectsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
+$personId = 56; // int
 $date = 'date_example'; // string
 
 try {
-    $result = $apiInstance->listAllowedProjects($person_id, $date);
+    $result = $apiInstance->listAllowedProjects($personId, $date);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->listAllowedProjects: ', $e->getMessage(), PHP_EOL;
@@ -225,7 +225,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 | **date** | **string**|  | [optional] |
 
 ### Return type
@@ -248,7 +248,7 @@ try {
 ## `listProjects()`
 
 ```php
-listProjects($include_inactive): \TimecardClient\Model\ListProjects200Response
+listProjects($includeInactive): \TimecardClient\Model\ListProjects200Response
 ```
 
 Projects
@@ -270,10 +270,10 @@ $apiInstance = new TimecardClient\Api\ProjectsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$include_inactive = 'include_inactive_example'; // string
+$includeInactive = 'includeInactive_example'; // string
 
 try {
-    $result = $apiInstance->listProjects($include_inactive);
+    $result = $apiInstance->listProjects($includeInactive);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->listProjects: ', $e->getMessage(), PHP_EOL;
@@ -284,7 +284,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **include_inactive** | **string**|  | [optional] |
+| **includeInactive** | **string**|  | [optional] |
 
 ### Return type
 
@@ -306,7 +306,7 @@ try {
 ## `updateProject()`
 
 ```php
-updateProject($project_id, $update_project_request): \TimecardClient\Model\CreateProject201Response
+updateProject($projectId, $updateProjectRequest): \TimecardClient\Model\CreateProject201Response
 ```
 
 Change a project (read-modify-write, timeCard user right 213 update)
@@ -328,11 +328,11 @@ $apiInstance = new TimecardClient\Api\ProjectsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$project_id = 56; // int
-$update_project_request = new \TimecardClient\Model\UpdateProjectRequest(); // \TimecardClient\Model\UpdateProjectRequest
+$projectId = 56; // int
+$updateProjectRequest = new \TimecardClient\Model\UpdateProjectRequest(); // \TimecardClient\Model\UpdateProjectRequest
 
 try {
-    $result = $apiInstance->updateProject($project_id, $update_project_request);
+    $result = $apiInstance->updateProject($projectId, $updateProjectRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->updateProject: ', $e->getMessage(), PHP_EOL;
@@ -343,8 +343,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **project_id** | **int**|  | |
-| **update_project_request** | [**\TimecardClient\Model\UpdateProjectRequest**](../Model/UpdateProjectRequest.md)|  | |
+| **projectId** | **int**|  | |
+| **updateProjectRequest** | [**\TimecardClient\Model\UpdateProjectRequest**](../Model/UpdateProjectRequest.md)|  | |
 
 ### Return type
 

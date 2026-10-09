@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getDepartment()`
 
 ```php
-getDepartment($department_id): \TimecardClient\Model\GetDepartment200Response
+getDepartment($departmentId): \TimecardClient\Model\GetDepartment200Response
 ```
 
 Department details
@@ -34,10 +34,10 @@ $apiInstance = new TimecardClient\Api\DepartmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$department_id = 56; // int
+$departmentId = 56; // int
 
 try {
-    $result = $apiInstance->getDepartment($department_id);
+    $result = $apiInstance->getDepartment($departmentId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DepartmentsApi->getDepartment: ', $e->getMessage(), PHP_EOL;
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **department_id** | **int**|  | |
+| **departmentId** | **int**|  | |
 
 ### Return type
 
@@ -70,7 +70,7 @@ try {
 ## `listDepartmentMembers()`
 
 ```php
-listDepartmentMembers($department_id): \TimecardClient\Model\ListDepartmentMembers200Response
+listDepartmentMembers($departmentId): \TimecardClient\Model\ListDepartmentMembers200Response
 ```
 
 Members as of today (without the leader unless the leader is a member)
@@ -92,10 +92,10 @@ $apiInstance = new TimecardClient\Api\DepartmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$department_id = 56; // int
+$departmentId = 56; // int
 
 try {
-    $result = $apiInstance->listDepartmentMembers($department_id);
+    $result = $apiInstance->listDepartmentMembers($departmentId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DepartmentsApi->listDepartmentMembers: ', $e->getMessage(), PHP_EOL;
@@ -106,7 +106,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **department_id** | **int**|  | |
+| **departmentId** | **int**|  | |
 
 ### Return type
 

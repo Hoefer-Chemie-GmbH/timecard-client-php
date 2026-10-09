@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**calculation_id** | **int** |  |
+**calculationId** | **int** |  |
 **name** | **string** |  |
 **unit** | **string** |  |
 

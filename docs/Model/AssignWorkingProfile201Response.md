@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**person_ids** | **int[]** |  |
-**working_profile_id** | **int** | working time profile that applies optionally in the period |
+**personIds** | **int[]** |  |
+**workingProfileId** | **int** | working time profile that applies optionally in the period |
 **from** | **string** |  |
 **to** | **string** |  |
 

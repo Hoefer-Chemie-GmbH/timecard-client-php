@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **kind** | **string** |  |
-**account_name** | **string** |  |
-**source_account** | **string** |  |
+**accountName** | **string** |  |
+**sourceAccount** | **string** |  |
 **unit** | **string** |  |
 **value** | **float** |  |
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**absence_type_id** | **int** |  |
+**absenceTypeId** | **int** |  |
 **name** | **string** |  |
-**duration_seconds** | **int** |  |
+**durationSeconds** | **int** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

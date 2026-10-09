@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getFreeField()`
 
 ```php
-getFreeField($free_field_id): \TimecardClient\Model\GetFreeField200Response
+getFreeField($freeFieldId): \TimecardClient\Model\GetFreeField200Response
 ```
 
 Free field details
@@ -33,10 +33,10 @@ $apiInstance = new TimecardClient\Api\FreeFieldsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$free_field_id = 56; // int
+$freeFieldId = 56; // int
 
 try {
-    $result = $apiInstance->getFreeField($free_field_id);
+    $result = $apiInstance->getFreeField($freeFieldId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FreeFieldsApi->getFreeField: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **free_field_id** | **int**|  | |
+| **freeFieldId** | **int**|  | |
 
 ### Return type
 

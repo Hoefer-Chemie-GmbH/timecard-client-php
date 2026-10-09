@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `listCalculationTemplates()`
 
 ```php
-listCalculationTemplates($active_only): \TimecardClient\Model\ListCalculationTemplates200Response
+listCalculationTemplates($activeOnly): \TimecardClient\Model\ListCalculationTemplates200Response
 ```
 
 Calculation templates
@@ -32,10 +32,10 @@ $apiInstance = new TimecardClient\Api\CalculationTemplatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$active_only = 'active_only_example'; // string
+$activeOnly = 'activeOnly_example'; // string
 
 try {
-    $result = $apiInstance->listCalculationTemplates($active_only);
+    $result = $apiInstance->listCalculationTemplates($activeOnly);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CalculationTemplatesApi->listCalculationTemplates: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +46,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **active_only** | **string**|  | [optional] |
+| **activeOnly** | **string**|  | [optional] |
 
 ### Return type
 

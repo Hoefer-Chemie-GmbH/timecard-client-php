@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**person_id** | **int** |  |
-**person_no** | **string** |  |
-**first_name** | **string** |  |
-**last_name** | **string** |  |
+**personId** | **int** |  |
+**personNo** | **string** |  |
+**firstName** | **string** |  |
+**lastName** | **string** |  |
 **department** | **string** |  |
-**working_profile** | **string** |  |
+**workingProfile** | **string** |  |
 **month** | **int** |  |
-**is_total** | **bool** |  |
+**isTotal** | **bool** |  |
 **holidays** | **float** |  |
-**sick_days** | **float** |  |
-**working_days** | **float** |  |
-**absent_days** | **float** |  |
-**office_days** | **float** |  |
-**home_office_days** | **float** |  |
+**sickDays** | **float** |  |
+**workingDays** | **float** |  |
+**absentDays** | **float** |  |
+**officeDays** | **float** |  |
+**homeOfficeDays** | **float** |  |
 **days** | [**\TimecardClient\Model\GetPersonAbsenceOverview200ResponseItemsInnerDaysInner[]**](GetPersonAbsenceOverview200ResponseItemsInnerDaysInner.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
