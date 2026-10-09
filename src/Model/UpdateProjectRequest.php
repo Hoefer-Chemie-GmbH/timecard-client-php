@@ -1,6 +1,6 @@
 <?php
 /**
- * UpdateWorkOperationRequest
+ * UpdateProjectRequest
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use TimecardClient\ObjectSerializer;
 
 /**
- * UpdateWorkOperationRequest Class Doc Comment
+ * UpdateProjectRequest Class Doc Comment
  *
  * @package  TimecardClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSerializable
+class UpdateProjectRequest implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'updateWorkOperation_request';
+    protected static string $openAPIModelName = 'updateProject_request';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,12 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
       */
     protected static array $openAPITypes = [
         'name' => 'string',
+        'token' => 'string',
         'number' => 'int',
         'description' => 'string',
+        'end_date' => 'string',
         'is_active' => 'bool',
+        'work_operation_ids' => 'int[]',
         'restricted_department_ids' => 'int[]',
         'restricted_group_ids' => 'int[]',
         'browser_allowed' => 'bool',
@@ -76,9 +79,12 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
       */
     protected static array $openAPIFormats = [
         'name' => null,
+        'token' => null,
         'number' => null,
         'description' => null,
+        'end_date' => null,
         'is_active' => null,
+        'work_operation_ids' => null,
         'restricted_department_ids' => null,
         'restricted_group_ids' => null,
         'browser_allowed' => null,
@@ -93,9 +99,12 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
       */
     protected static array $openAPINullables = [
         'name' => false,
+        'token' => true,
         'number' => true,
         'description' => true,
+        'end_date' => true,
         'is_active' => false,
+        'work_operation_ids' => false,
         'restricted_department_ids' => false,
         'restricted_group_ids' => false,
         'browser_allowed' => false,
@@ -190,9 +199,12 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
      */
     protected static array $attributeMap = [
         'name' => 'name',
+        'token' => 'token',
         'number' => 'number',
         'description' => 'description',
+        'end_date' => 'endDate',
         'is_active' => 'isActive',
+        'work_operation_ids' => 'workOperationIds',
         'restricted_department_ids' => 'restrictedDepartmentIds',
         'restricted_group_ids' => 'restrictedGroupIds',
         'browser_allowed' => 'browserAllowed',
@@ -207,9 +219,12 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
      */
     protected static array $setters = [
         'name' => 'setName',
+        'token' => 'setToken',
         'number' => 'setNumber',
         'description' => 'setDescription',
+        'end_date' => 'setEndDate',
         'is_active' => 'setIsActive',
+        'work_operation_ids' => 'setWorkOperationIds',
         'restricted_department_ids' => 'setRestrictedDepartmentIds',
         'restricted_group_ids' => 'setRestrictedGroupIds',
         'browser_allowed' => 'setBrowserAllowed',
@@ -224,9 +239,12 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
      */
     protected static array $getters = [
         'name' => 'getName',
+        'token' => 'getToken',
         'number' => 'getNumber',
         'description' => 'getDescription',
+        'end_date' => 'getEndDate',
         'is_active' => 'getIsActive',
+        'work_operation_ids' => 'getWorkOperationIds',
         'restricted_department_ids' => 'getRestrictedDepartmentIds',
         'restricted_group_ids' => 'getRestrictedGroupIds',
         'browser_allowed' => 'getBrowserAllowed',
@@ -291,9 +309,12 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     public function __construct(?array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
         $this->setIfExists('number', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('end_date', $data ?? [], null);
         $this->setIfExists('is_active', $data ?? [], null);
+        $this->setIfExists('work_operation_ids', $data ?? [], null);
         $this->setIfExists('restricted_department_ids', $data ?? [], null);
         $this->setIfExists('restricted_group_ids', $data ?? [], null);
         $this->setIfExists('browser_allowed', $data ?? [], null);
@@ -336,6 +357,10 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
 
+        if (!is_null($this->container['token']) && (mb_strlen($this->container['token']) > 16)) {
+            $invalidProperties[] = "invalid value for 'token', the character length must be smaller than or equal to 16.";
+        }
+
         if (!is_null($this->container['number']) && ($this->container['number'] > 9007199254740991)) {
             $invalidProperties[] = "invalid value for 'number', must be smaller than or equal to 9007199254740991.";
         }
@@ -346,6 +371,10 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
 
         if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 200)) {
             $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 200.";
+        }
+
+        if (!is_null($this->container['end_date']) && !preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", $this->container['end_date'])) {
+            $invalidProperties[] = "invalid value for 'end_date', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.";
         }
 
         return $invalidProperties;
@@ -386,13 +415,51 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
             throw new InvalidArgumentException('non-nullable name cannot be null');
         }
         if ((mb_strlen($name) > 150)) {
-            throw new InvalidArgumentException('invalid length for $name when calling UpdateWorkOperationRequest., must be smaller than or equal to 150.');
+            throw new InvalidArgumentException('invalid length for $name when calling UpdateProjectRequest., must be smaller than or equal to 150.');
         }
         if ((mb_strlen($name) < 1)) {
-            throw new InvalidArgumentException('invalid length for $name when calling UpdateWorkOperationRequest., must be bigger than or equal to 1.');
+            throw new InvalidArgumentException('invalid length for $name when calling UpdateProjectRequest., must be bigger than or equal to 1.');
         }
 
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     *
+     * @return string|null
+     */
+    public function getToken(): ?string
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string|null $token token
+     *
+     * @return $this
+     */
+    public function setToken(?string $token): static
+    {
+        if (is_null($token)) {
+            array_push($this->openAPINullablesSetToNull, 'token');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('token', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        if (!is_null($token) && (mb_strlen($token) > 16)) {
+            throw new InvalidArgumentException('invalid length for $token when calling UpdateProjectRequest., must be smaller than or equal to 16.');
+        }
+
+        $this->container['token'] = $token;
 
         return $this;
     }
@@ -428,10 +495,10 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
         }
 
         if (!is_null($number) && ($number > 9007199254740991)) {
-            throw new InvalidArgumentException('invalid value for $number when calling UpdateWorkOperationRequest., must be smaller than or equal to 9007199254740991.');
+            throw new InvalidArgumentException('invalid value for $number when calling UpdateProjectRequest., must be smaller than or equal to 9007199254740991.');
         }
         if (!is_null($number) && ($number < 0)) {
-            throw new InvalidArgumentException('invalid value for $number when calling UpdateWorkOperationRequest., must be bigger than or equal to 0.');
+            throw new InvalidArgumentException('invalid value for $number when calling UpdateProjectRequest., must be bigger than or equal to 0.');
         }
 
         $this->container['number'] = $number;
@@ -469,10 +536,49 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
             }
         }
         if (!is_null($description) && (mb_strlen($description) > 200)) {
-            throw new InvalidArgumentException('invalid length for $description when calling UpdateWorkOperationRequest., must be smaller than or equal to 200.');
+            throw new InvalidArgumentException('invalid length for $description when calling UpdateProjectRequest., must be smaller than or equal to 200.');
         }
 
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets end_date
+     *
+     * @return string|null
+     */
+    public function getEndDate(): ?string
+    {
+        return $this->container['end_date'];
+    }
+
+    /**
+     * Sets end_date
+     *
+     * @param string|null $end_date end_date
+     *
+     * @return $this
+     */
+    public function setEndDate(?string $end_date): static
+    {
+        if (is_null($end_date)) {
+            array_push($this->openAPINullablesSetToNull, 'end_date');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('end_date', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+
+        if (!is_null($end_date) && (!preg_match("/^\\d{4}-\\d{2}-\\d{2}$/", ObjectSerializer::toString($end_date)))) {
+            throw new InvalidArgumentException("invalid value for \$end_date when calling UpdateProjectRequest., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}$/.");
+        }
+
+        $this->container['end_date'] = $end_date;
 
         return $this;
     }
@@ -500,6 +606,33 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
             throw new InvalidArgumentException('non-nullable is_active cannot be null');
         }
         $this->container['is_active'] = $is_active;
+
+        return $this;
+    }
+
+    /**
+     * Gets work_operation_ids
+     *
+     * @return int[]|null
+     */
+    public function getWorkOperationIds(): ?array
+    {
+        return $this->container['work_operation_ids'];
+    }
+
+    /**
+     * Sets work_operation_ids
+     *
+     * @param int[]|null $work_operation_ids work operations that may be booked on the project
+     *
+     * @return $this
+     */
+    public function setWorkOperationIds(?array $work_operation_ids): static
+    {
+        if (is_null($work_operation_ids)) {
+            throw new InvalidArgumentException('non-nullable work_operation_ids cannot be null');
+        }
+        $this->container['work_operation_ids'] = $work_operation_ids;
 
         return $this;
     }

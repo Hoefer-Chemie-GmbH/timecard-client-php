@@ -1,6 +1,6 @@
 <?php
 /**
- * UpdateWorkOperationRequest
+ * CreateProject201Response
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use TimecardClient\ObjectSerializer;
 
 /**
- * UpdateWorkOperationRequest Class Doc Comment
+ * CreateProject201Response Class Doc Comment
  *
  * @package  TimecardClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSerializable
+class CreateProject201Response implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'updateWorkOperation_request';
+    protected static string $openAPIModelName = 'createProject_201_response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,15 +58,21 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
+        'id' => 'int',
         'name' => 'string',
+        'token' => 'string',
         'number' => 'int',
         'description' => 'string',
+        'end_date' => 'string',
         'is_active' => 'bool',
+        'is_used' => 'bool',
+        'work_operation_ids' => 'int[]',
         'restricted_department_ids' => 'int[]',
         'restricted_group_ids' => 'int[]',
         'browser_allowed' => 'bool',
         'terminal_allowed' => 'bool',
-        'app_allowed' => 'bool'
+        'app_allowed' => 'bool',
+        'free_fields' => '\TimecardClient\Model\CreatePerson201ResponseFreeFieldsInner[]'
     ];
 
     /**
@@ -75,15 +81,21 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
+        'id' => null,
         'name' => null,
+        'token' => null,
         'number' => null,
         'description' => null,
+        'end_date' => null,
         'is_active' => null,
+        'is_used' => null,
+        'work_operation_ids' => null,
         'restricted_department_ids' => null,
         'restricted_group_ids' => null,
         'browser_allowed' => null,
         'terminal_allowed' => null,
-        'app_allowed' => null
+        'app_allowed' => null,
+        'free_fields' => null
     ];
 
     /**
@@ -92,15 +104,21 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
+        'id' => true,
         'name' => false,
+        'token' => true,
         'number' => true,
         'description' => true,
+        'end_date' => true,
         'is_active' => false,
+        'is_used' => false,
+        'work_operation_ids' => false,
         'restricted_department_ids' => false,
         'restricted_group_ids' => false,
         'browser_allowed' => false,
         'terminal_allowed' => false,
-        'app_allowed' => false
+        'app_allowed' => false,
+        'free_fields' => false
     ];
 
     /**
@@ -189,15 +207,21 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
      * @var array<string, string>
      */
     protected static array $attributeMap = [
+        'id' => 'id',
         'name' => 'name',
+        'token' => 'token',
         'number' => 'number',
         'description' => 'description',
+        'end_date' => 'endDate',
         'is_active' => 'isActive',
+        'is_used' => 'isUsed',
+        'work_operation_ids' => 'workOperationIds',
         'restricted_department_ids' => 'restrictedDepartmentIds',
         'restricted_group_ids' => 'restrictedGroupIds',
         'browser_allowed' => 'browserAllowed',
         'terminal_allowed' => 'terminalAllowed',
-        'app_allowed' => 'appAllowed'
+        'app_allowed' => 'appAllowed',
+        'free_fields' => 'freeFields'
     ];
 
     /**
@@ -206,15 +230,21 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
      * @var array<string, string>
      */
     protected static array $setters = [
+        'id' => 'setId',
         'name' => 'setName',
+        'token' => 'setToken',
         'number' => 'setNumber',
         'description' => 'setDescription',
+        'end_date' => 'setEndDate',
         'is_active' => 'setIsActive',
+        'is_used' => 'setIsUsed',
+        'work_operation_ids' => 'setWorkOperationIds',
         'restricted_department_ids' => 'setRestrictedDepartmentIds',
         'restricted_group_ids' => 'setRestrictedGroupIds',
         'browser_allowed' => 'setBrowserAllowed',
         'terminal_allowed' => 'setTerminalAllowed',
-        'app_allowed' => 'setAppAllowed'
+        'app_allowed' => 'setAppAllowed',
+        'free_fields' => 'setFreeFields'
     ];
 
     /**
@@ -223,15 +253,21 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
      * @var array<string, string>
      */
     protected static array $getters = [
+        'id' => 'getId',
         'name' => 'getName',
+        'token' => 'getToken',
         'number' => 'getNumber',
         'description' => 'getDescription',
+        'end_date' => 'getEndDate',
         'is_active' => 'getIsActive',
+        'is_used' => 'getIsUsed',
+        'work_operation_ids' => 'getWorkOperationIds',
         'restricted_department_ids' => 'getRestrictedDepartmentIds',
         'restricted_group_ids' => 'getRestrictedGroupIds',
         'browser_allowed' => 'getBrowserAllowed',
         'terminal_allowed' => 'getTerminalAllowed',
-        'app_allowed' => 'getAppAllowed'
+        'app_allowed' => 'getAppAllowed',
+        'free_fields' => 'getFreeFields'
     ];
 
     /**
@@ -290,15 +326,21 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
         $this->setIfExists('number', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('end_date', $data ?? [], null);
         $this->setIfExists('is_active', $data ?? [], null);
+        $this->setIfExists('is_used', $data ?? [], null);
+        $this->setIfExists('work_operation_ids', $data ?? [], null);
         $this->setIfExists('restricted_department_ids', $data ?? [], null);
         $this->setIfExists('restricted_group_ids', $data ?? [], null);
         $this->setIfExists('browser_allowed', $data ?? [], null);
         $this->setIfExists('terminal_allowed', $data ?? [], null);
         $this->setIfExists('app_allowed', $data ?? [], null);
+        $this->setIfExists('free_fields', $data ?? [], null);
     }
 
     /**
@@ -328,26 +370,67 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 150)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 150.";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if (($this->container['id'] > 9007199254740991)) {
+            $invalidProperties[] = "invalid value for 'id', must be smaller than or equal to 9007199254740991.";
         }
 
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+        if (($this->container['id'] < -9007199254740991)) {
+            $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to -9007199254740991.";
         }
 
-        if (!is_null($this->container['number']) && ($this->container['number'] > 9007199254740991)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['token'] === null) {
+            $invalidProperties[] = "'token' can't be null";
+        }
+        if ($this->container['number'] === null) {
+            $invalidProperties[] = "'number' can't be null";
+        }
+        if (($this->container['number'] > 9007199254740991)) {
             $invalidProperties[] = "invalid value for 'number', must be smaller than or equal to 9007199254740991.";
         }
 
-        if (!is_null($this->container['number']) && ($this->container['number'] < 0)) {
-            $invalidProperties[] = "invalid value for 'number', must be bigger than or equal to 0.";
+        if (($this->container['number'] < -9007199254740991)) {
+            $invalidProperties[] = "invalid value for 'number', must be bigger than or equal to -9007199254740991.";
         }
 
-        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 200)) {
-            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 200.";
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
         }
-
+        if ($this->container['end_date'] === null) {
+            $invalidProperties[] = "'end_date' can't be null";
+        }
+        if ($this->container['is_active'] === null) {
+            $invalidProperties[] = "'is_active' can't be null";
+        }
+        if ($this->container['is_used'] === null) {
+            $invalidProperties[] = "'is_used' can't be null";
+        }
+        if ($this->container['work_operation_ids'] === null) {
+            $invalidProperties[] = "'work_operation_ids' can't be null";
+        }
+        if ($this->container['restricted_department_ids'] === null) {
+            $invalidProperties[] = "'restricted_department_ids' can't be null";
+        }
+        if ($this->container['restricted_group_ids'] === null) {
+            $invalidProperties[] = "'restricted_group_ids' can't be null";
+        }
+        if ($this->container['browser_allowed'] === null) {
+            $invalidProperties[] = "'browser_allowed' can't be null";
+        }
+        if ($this->container['terminal_allowed'] === null) {
+            $invalidProperties[] = "'terminal_allowed' can't be null";
+        }
+        if ($this->container['app_allowed'] === null) {
+            $invalidProperties[] = "'app_allowed' can't be null";
+        }
+        if ($this->container['free_fields'] === null) {
+            $invalidProperties[] = "'free_fields' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -364,11 +447,53 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
 
 
     /**
+     * Gets id
+     *
+     * @return int
+     */
+    public function getId(): ?int
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int $id id
+     *
+     * @return $this
+     */
+    public function setId(?int $id): static
+    {
+        if (is_null($id)) {
+            array_push($this->openAPINullablesSetToNull, 'id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+
+        if (!is_null($id) && ($id > 9007199254740991)) {
+            throw new InvalidArgumentException('invalid value for $id when calling CreateProject201Response., must be smaller than or equal to 9007199254740991.');
+        }
+        if (!is_null($id) && ($id < -9007199254740991)) {
+            throw new InvalidArgumentException('invalid value for $id when calling CreateProject201Response., must be bigger than or equal to -9007199254740991.');
+        }
+
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      *
-     * @return string|null
+     * @return string
      */
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->container['name'];
     }
@@ -376,23 +501,50 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string $name name
      *
      * @return $this
      */
-    public function setName(?string $name): static
+    public function setName(string $name): static
     {
         if (is_null($name)) {
             throw new InvalidArgumentException('non-nullable name cannot be null');
         }
-        if ((mb_strlen($name) > 150)) {
-            throw new InvalidArgumentException('invalid length for $name when calling UpdateWorkOperationRequest., must be smaller than or equal to 150.');
-        }
-        if ((mb_strlen($name) < 1)) {
-            throw new InvalidArgumentException('invalid length for $name when calling UpdateWorkOperationRequest., must be bigger than or equal to 1.');
-        }
-
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     *
+     * @return string
+     */
+    public function getToken(): ?string
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string $token token
+     *
+     * @return $this
+     */
+    public function setToken(?string $token): static
+    {
+        if (is_null($token)) {
+            array_push($this->openAPINullablesSetToNull, 'token');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('token', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['token'] = $token;
 
         return $this;
     }
@@ -400,7 +552,7 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets number
      *
-     * @return int|null
+     * @return int
      */
     public function getNumber(): ?int
     {
@@ -410,7 +562,7 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets number
      *
-     * @param int|null $number number
+     * @param int $number number
      *
      * @return $this
      */
@@ -428,10 +580,10 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
         }
 
         if (!is_null($number) && ($number > 9007199254740991)) {
-            throw new InvalidArgumentException('invalid value for $number when calling UpdateWorkOperationRequest., must be smaller than or equal to 9007199254740991.');
+            throw new InvalidArgumentException('invalid value for $number when calling CreateProject201Response., must be smaller than or equal to 9007199254740991.');
         }
-        if (!is_null($number) && ($number < 0)) {
-            throw new InvalidArgumentException('invalid value for $number when calling UpdateWorkOperationRequest., must be bigger than or equal to 0.');
+        if (!is_null($number) && ($number < -9007199254740991)) {
+            throw new InvalidArgumentException('invalid value for $number when calling CreateProject201Response., must be bigger than or equal to -9007199254740991.');
         }
 
         $this->container['number'] = $number;
@@ -442,7 +594,7 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets description
      *
-     * @return string|null
+     * @return string
      */
     public function getDescription(): ?string
     {
@@ -452,7 +604,7 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string $description description
      *
      * @return $this
      */
@@ -468,11 +620,41 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        if (!is_null($description) && (mb_strlen($description) > 200)) {
-            throw new InvalidArgumentException('invalid length for $description when calling UpdateWorkOperationRequest., must be smaller than or equal to 200.');
-        }
-
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets end_date
+     *
+     * @return string
+     */
+    public function getEndDate(): ?string
+    {
+        return $this->container['end_date'];
+    }
+
+    /**
+     * Sets end_date
+     *
+     * @param string $end_date end_date
+     *
+     * @return $this
+     */
+    public function setEndDate(?string $end_date): static
+    {
+        if (is_null($end_date)) {
+            array_push($this->openAPINullablesSetToNull, 'end_date');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('end_date', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['end_date'] = $end_date;
 
         return $this;
     }
@@ -480,9 +662,9 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets is_active
      *
-     * @return bool|null
+     * @return bool
      */
-    public function getIsActive(): ?bool
+    public function getIsActive(): bool
     {
         return $this->container['is_active'];
     }
@@ -490,11 +672,11 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets is_active
      *
-     * @param bool|null $is_active is_active
+     * @param bool $is_active is_active
      *
      * @return $this
      */
-    public function setIsActive(?bool $is_active): static
+    public function setIsActive(bool $is_active): static
     {
         if (is_null($is_active)) {
             throw new InvalidArgumentException('non-nullable is_active cannot be null');
@@ -505,11 +687,65 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     }
 
     /**
+     * Gets is_used
+     *
+     * @return bool
+     */
+    public function getIsUsed(): bool
+    {
+        return $this->container['is_used'];
+    }
+
+    /**
+     * Sets is_used
+     *
+     * @param bool $is_used is_used
+     *
+     * @return $this
+     */
+    public function setIsUsed(bool $is_used): static
+    {
+        if (is_null($is_used)) {
+            throw new InvalidArgumentException('non-nullable is_used cannot be null');
+        }
+        $this->container['is_used'] = $is_used;
+
+        return $this;
+    }
+
+    /**
+     * Gets work_operation_ids
+     *
+     * @return int[]
+     */
+    public function getWorkOperationIds(): array
+    {
+        return $this->container['work_operation_ids'];
+    }
+
+    /**
+     * Sets work_operation_ids
+     *
+     * @param int[] $work_operation_ids work_operation_ids
+     *
+     * @return $this
+     */
+    public function setWorkOperationIds(array $work_operation_ids): static
+    {
+        if (is_null($work_operation_ids)) {
+            throw new InvalidArgumentException('non-nullable work_operation_ids cannot be null');
+        }
+        $this->container['work_operation_ids'] = $work_operation_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets restricted_department_ids
      *
-     * @return int[]|null
+     * @return int[]
      */
-    public function getRestrictedDepartmentIds(): ?array
+    public function getRestrictedDepartmentIds(): array
     {
         return $this->container['restricted_department_ids'];
     }
@@ -517,11 +753,11 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets restricted_department_ids
      *
-     * @param int[]|null $restricted_department_ids restricted_department_ids
+     * @param int[] $restricted_department_ids restricted_department_ids
      *
      * @return $this
      */
-    public function setRestrictedDepartmentIds(?array $restricted_department_ids): static
+    public function setRestrictedDepartmentIds(array $restricted_department_ids): static
     {
         if (is_null($restricted_department_ids)) {
             throw new InvalidArgumentException('non-nullable restricted_department_ids cannot be null');
@@ -534,9 +770,9 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets restricted_group_ids
      *
-     * @return int[]|null
+     * @return int[]
      */
-    public function getRestrictedGroupIds(): ?array
+    public function getRestrictedGroupIds(): array
     {
         return $this->container['restricted_group_ids'];
     }
@@ -544,11 +780,11 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets restricted_group_ids
      *
-     * @param int[]|null $restricted_group_ids restricted_group_ids
+     * @param int[] $restricted_group_ids restricted_group_ids
      *
      * @return $this
      */
-    public function setRestrictedGroupIds(?array $restricted_group_ids): static
+    public function setRestrictedGroupIds(array $restricted_group_ids): static
     {
         if (is_null($restricted_group_ids)) {
             throw new InvalidArgumentException('non-nullable restricted_group_ids cannot be null');
@@ -561,9 +797,9 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets browser_allowed
      *
-     * @return bool|null
+     * @return bool
      */
-    public function getBrowserAllowed(): ?bool
+    public function getBrowserAllowed(): bool
     {
         return $this->container['browser_allowed'];
     }
@@ -571,11 +807,11 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets browser_allowed
      *
-     * @param bool|null $browser_allowed browser_allowed
+     * @param bool $browser_allowed browser_allowed
      *
      * @return $this
      */
-    public function setBrowserAllowed(?bool $browser_allowed): static
+    public function setBrowserAllowed(bool $browser_allowed): static
     {
         if (is_null($browser_allowed)) {
             throw new InvalidArgumentException('non-nullable browser_allowed cannot be null');
@@ -588,9 +824,9 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets terminal_allowed
      *
-     * @return bool|null
+     * @return bool
      */
-    public function getTerminalAllowed(): ?bool
+    public function getTerminalAllowed(): bool
     {
         return $this->container['terminal_allowed'];
     }
@@ -598,11 +834,11 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets terminal_allowed
      *
-     * @param bool|null $terminal_allowed terminal_allowed
+     * @param bool $terminal_allowed terminal_allowed
      *
      * @return $this
      */
-    public function setTerminalAllowed(?bool $terminal_allowed): static
+    public function setTerminalAllowed(bool $terminal_allowed): static
     {
         if (is_null($terminal_allowed)) {
             throw new InvalidArgumentException('non-nullable terminal_allowed cannot be null');
@@ -615,9 +851,9 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets app_allowed
      *
-     * @return bool|null
+     * @return bool
      */
-    public function getAppAllowed(): ?bool
+    public function getAppAllowed(): bool
     {
         return $this->container['app_allowed'];
     }
@@ -625,16 +861,43 @@ class UpdateWorkOperationRequest implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets app_allowed
      *
-     * @param bool|null $app_allowed app_allowed
+     * @param bool $app_allowed app_allowed
      *
      * @return $this
      */
-    public function setAppAllowed(?bool $app_allowed): static
+    public function setAppAllowed(bool $app_allowed): static
     {
         if (is_null($app_allowed)) {
             throw new InvalidArgumentException('non-nullable app_allowed cannot be null');
         }
         $this->container['app_allowed'] = $app_allowed;
+
+        return $this;
+    }
+
+    /**
+     * Gets free_fields
+     *
+     * @return \TimecardClient\Model\CreatePerson201ResponseFreeFieldsInner[]
+     */
+    public function getFreeFields(): array
+    {
+        return $this->container['free_fields'];
+    }
+
+    /**
+     * Sets free_fields
+     *
+     * @param \TimecardClient\Model\CreatePerson201ResponseFreeFieldsInner[] $free_fields free_fields
+     *
+     * @return $this
+     */
+    public function setFreeFields(array $free_fields): static
+    {
+        if (is_null($free_fields)) {
+            throw new InvalidArgumentException('non-nullable free_fields cannot be null');
+        }
+        $this->container['free_fields'] = $free_fields;
 
         return $this;
     }
