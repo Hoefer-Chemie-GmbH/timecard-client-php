@@ -1,0 +1,14 @@
+# files maintained by the facade repository's sdk templates, never overwritten by the generator
+README.md
+composer.json
+.gitignore
+.github/**
+src/GoogleServiceAccountToken.php
+src/ProblemDetails.php
+examples/**
+tests/**
+phpunit.xml
+git_push.sh
+.travis.yml
+.php-cs-fixer.dist.php
+.phplint.yml
