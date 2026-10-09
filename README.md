@@ -2,7 +2,9 @@
 
 PHP client for a REST facade in front of the time recording system REINER SCT timeCard, generated with [openapi-generator](https://openapi-generator.tech/) (`php-nextgen`). The facade offers persons, bookings, balances, absences and master data as a documented JSON API with OAuth authentication, scopes and an audit log.
 
-- API version `0.1.0`, namespace `TimecardClient`.
+This project is not affiliated with, endorsed or sponsored by REINER SCT. REINER SCT and timeCard are trademarks of their respective owner.
+
+- API version `0.2.0`, namespace `TimecardClient`.
 - Generated: `src/Api/*Api.php` (one class per tag), `src/Model/*`, `Configuration.php`, `ApiException.php`, `ObjectSerializer.php`, `docs/`.
 - Hand-written: `src/GoogleServiceAccountToken.php` (Google ID tokens), `src/ProblemDetails.php` (Problem Details).
 
@@ -13,7 +15,7 @@ Composer, with this repository as VCS source:
 ```json
 {
   "repositories": [{ "type": "vcs", "url": "https://github.com/Hoefer-Chemie-GmbH/timecard-client-php" }],
-  "require": { "timecard/client": "^0.1.0" }
+  "require": { "timecard/client": "^0.2.0" }
 }
 ```
 
