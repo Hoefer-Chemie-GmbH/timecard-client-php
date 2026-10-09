@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createProject()`
 
 ```php
-createProject($createProjectRequest): \TimecardClient\Model\CreateProject201Response
+createProject($createProjectRequest, $idempotencyKey): \TimecardClient\Model\CreateProject201Response
 ```
 
 Create a project (timeCard user right 213 create)
@@ -38,9 +38,10 @@ $apiInstance = new TimecardClient\Api\ProjectsApi(
     $config
 );
 $createProjectRequest = new \TimecardClient\Model\CreateProjectRequest(); // \TimecardClient\Model\CreateProjectRequest
+$idempotencyKey = 'idempotencyKey_example'; // string | Repeating the request with the same key within 24 hours returns the stored response (header `Idempotent-Replayed: true`) instead of executing it again
 
 try {
-    $result = $apiInstance->createProject($createProjectRequest);
+    $result = $apiInstance->createProject($createProjectRequest, $idempotencyKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectsApi->createProject: ', $e->getMessage(), PHP_EOL;
@@ -52,6 +53,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **createProjectRequest** | [**\TimecardClient\Model\CreateProjectRequest**](../Model/CreateProjectRequest.md)|  | |
+| **idempotencyKey** | **string**| Repeating the request with the same key within 24 hours returns the stored response (header &#x60;Idempotent-Replayed: true&#x60;) instead of executing it again | [optional] |
 
 ### Return type
 

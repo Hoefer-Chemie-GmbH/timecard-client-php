@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createWorkOperation()`
 
 ```php
-createWorkOperation($createWorkOperationRequest): \TimecardClient\Model\CreateWorkOperation201Response
+createWorkOperation($createWorkOperationRequest, $idempotencyKey): \TimecardClient\Model\CreateWorkOperation201Response
 ```
 
 Create a work operation (timeCard user right 213 create)
@@ -38,9 +38,10 @@ $apiInstance = new TimecardClient\Api\WorkOperationsApi(
     $config
 );
 $createWorkOperationRequest = new \TimecardClient\Model\CreateWorkOperationRequest(); // \TimecardClient\Model\CreateWorkOperationRequest
+$idempotencyKey = 'idempotencyKey_example'; // string | Repeating the request with the same key within 24 hours returns the stored response (header `Idempotent-Replayed: true`) instead of executing it again
 
 try {
-    $result = $apiInstance->createWorkOperation($createWorkOperationRequest);
+    $result = $apiInstance->createWorkOperation($createWorkOperationRequest, $idempotencyKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WorkOperationsApi->createWorkOperation: ', $e->getMessage(), PHP_EOL;
@@ -52,6 +53,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **createWorkOperationRequest** | [**\TimecardClient\Model\CreateWorkOperationRequest**](../Model/CreateWorkOperationRequest.md)|  | |
+| **idempotencyKey** | **string**| Repeating the request with the same key within 24 hours returns the stored response (header &#x60;Idempotent-Replayed: true&#x60;) instead of executing it again | [optional] |
 
 ### Return type
 

@@ -22,7 +22,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createCarryOver()`
 
 ```php
-createCarryOver($personId, $calculationId, $createCarryOverRequest): \TimecardClient\Model\ListCarryOvers200ResponseItemsInner
+createCarryOver($personId, $calculationId, $createCarryOverRequest, $idempotencyKey): \TimecardClient\Model\ListCarryOvers200ResponseItemsInner
 ```
 
 Create a manual carry-over (timeCard user right 223 create)
@@ -47,9 +47,10 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
 $personId = 56; // int
 $calculationId = 56; // int
 $createCarryOverRequest = new \TimecardClient\Model\CreateCarryOverRequest(); // \TimecardClient\Model\CreateCarryOverRequest
+$idempotencyKey = 'idempotencyKey_example'; // string | Repeating the request with the same key within 24 hours returns the stored response (header `Idempotent-Replayed: true`) instead of executing it again
 
 try {
-    $result = $apiInstance->createCarryOver($personId, $calculationId, $createCarryOverRequest);
+    $result = $apiInstance->createCarryOver($personId, $calculationId, $createCarryOverRequest, $idempotencyKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->createCarryOver: ', $e->getMessage(), PHP_EOL;
@@ -63,6 +64,7 @@ try {
 | **personId** | **int**|  | |
 | **calculationId** | **int**|  | |
 | **createCarryOverRequest** | [**\TimecardClient\Model\CreateCarryOverRequest**](../Model/CreateCarryOverRequest.md)|  | |
+| **idempotencyKey** | **string**| Repeating the request with the same key within 24 hours returns the stored response (header &#x60;Idempotent-Replayed: true&#x60;) instead of executing it again | [optional] |
 
 ### Return type
 
@@ -84,7 +86,7 @@ try {
 ## `createPerson()`
 
 ```php
-createPerson($createPersonRequest): \TimecardClient\Model\CreatePerson201Response
+createPerson($createPersonRequest, $idempotencyKey): \TimecardClient\Model\CreatePerson201Response
 ```
 
 Create a person (with isEmployee consumes an employee licence)
@@ -107,9 +109,10 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     $config
 );
 $createPersonRequest = new \TimecardClient\Model\CreatePersonRequest(); // \TimecardClient\Model\CreatePersonRequest
+$idempotencyKey = 'idempotencyKey_example'; // string | Repeating the request with the same key within 24 hours returns the stored response (header `Idempotent-Replayed: true`) instead of executing it again
 
 try {
-    $result = $apiInstance->createPerson($createPersonRequest);
+    $result = $apiInstance->createPerson($createPersonRequest, $idempotencyKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->createPerson: ', $e->getMessage(), PHP_EOL;
@@ -121,6 +124,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **createPersonRequest** | [**\TimecardClient\Model\CreatePersonRequest**](../Model/CreatePersonRequest.md)|  | |
+| **idempotencyKey** | **string**| Repeating the request with the same key within 24 hours returns the stored response (header &#x60;Idempotent-Replayed: true&#x60;) instead of executing it again | [optional] |
 
 ### Return type
 
