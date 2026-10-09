@@ -22,7 +22,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `assignWorkingProfile()`
 
 ```php
-assignWorkingProfile($assignWorkingProfileRequest): \TimecardClient\Model\AssignWorkingProfile201Response
+assignWorkingProfile($assignWorkingProfileRequest, $idempotencyKey): \TimecardClient\Model\AssignWorkingProfile201Response
 ```
 
 Assign an optional working time profile to persons for a period (timeCard user right 250)
@@ -45,9 +45,10 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     $config
 );
 $assignWorkingProfileRequest = new \TimecardClient\Model\AssignWorkingProfileRequest(); // \TimecardClient\Model\AssignWorkingProfileRequest
+$idempotencyKey = 'idempotencyKey_example'; // string | Repeating the request with the same key within 24 hours returns the stored response (header `Idempotent-Replayed: true`) instead of executing it again
 
 try {
-    $result = $apiInstance->assignWorkingProfile($assignWorkingProfileRequest);
+    $result = $apiInstance->assignWorkingProfile($assignWorkingProfileRequest, $idempotencyKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->assignWorkingProfile: ', $e->getMessage(), PHP_EOL;
@@ -59,6 +60,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **assignWorkingProfileRequest** | [**\TimecardClient\Model\AssignWorkingProfileRequest**](../Model/AssignWorkingProfileRequest.md)|  | |
+| **idempotencyKey** | **string**| Repeating the request with the same key within 24 hours returns the stored response (header &#x60;Idempotent-Replayed: true&#x60;) instead of executing it again | [optional] |
 
 ### Return type
 
@@ -80,7 +82,7 @@ try {
 ## `createAbsenceBooking()`
 
 ```php
-createAbsenceBooking($createAbsenceBookingRequest, $calculate): \TimecardClient\Model\CreateAbsenceBooking201Response
+createAbsenceBooking($createAbsenceBookingRequest, $calculate, $idempotencyKey): \TimecardClient\Model\CreateAbsenceBooking201Response
 ```
 
 Book an absence for a period (one or more persons); timeCard returns no booking id, the day list shows the booking as ABSENCE
@@ -104,9 +106,10 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
 );
 $createAbsenceBookingRequest = new \TimecardClient\Model\CreateAbsenceBookingRequest(); // \TimecardClient\Model\CreateAbsenceBookingRequest
 $calculate = 'calculate_example'; // string | false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards
+$idempotencyKey = 'idempotencyKey_example'; // string | Repeating the request with the same key within 24 hours returns the stored response (header `Idempotent-Replayed: true`) instead of executing it again
 
 try {
-    $result = $apiInstance->createAbsenceBooking($createAbsenceBookingRequest, $calculate);
+    $result = $apiInstance->createAbsenceBooking($createAbsenceBookingRequest, $calculate, $idempotencyKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->createAbsenceBooking: ', $e->getMessage(), PHP_EOL;
@@ -119,6 +122,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **createAbsenceBookingRequest** | [**\TimecardClient\Model\CreateAbsenceBookingRequest**](../Model/CreateAbsenceBookingRequest.md)|  | |
 | **calculate** | **string**| false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards | [optional] |
+| **idempotencyKey** | **string**| Repeating the request with the same key within 24 hours returns the stored response (header &#x60;Idempotent-Replayed: true&#x60;) instead of executing it again | [optional] |
 
 ### Return type
 
@@ -140,7 +144,7 @@ try {
 ## `createBooking()`
 
 ```php
-createBooking($createBookingRequest, $calculate): \TimecardClient\Model\CreateBooking201Response
+createBooking($createBookingRequest, $calculate, $idempotencyKey): \TimecardClient\Model\CreateBooking201Response
 ```
 
 Create a time or project booking
@@ -164,9 +168,10 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
 );
 $createBookingRequest = new \TimecardClient\Model\CreateBookingRequest(); // \TimecardClient\Model\CreateBookingRequest
 $calculate = 'calculate_example'; // string | false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards
+$idempotencyKey = 'idempotencyKey_example'; // string | Repeating the request with the same key within 24 hours returns the stored response (header `Idempotent-Replayed: true`) instead of executing it again
 
 try {
-    $result = $apiInstance->createBooking($createBookingRequest, $calculate);
+    $result = $apiInstance->createBooking($createBookingRequest, $calculate, $idempotencyKey);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->createBooking: ', $e->getMessage(), PHP_EOL;
@@ -179,6 +184,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **createBookingRequest** | [**\TimecardClient\Model\CreateBookingRequest**](../Model/CreateBookingRequest.md)|  | |
 | **calculate** | **string**| false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards | [optional] |
+| **idempotencyKey** | **string**| Repeating the request with the same key within 24 hours returns the stored response (header &#x60;Idempotent-Replayed: true&#x60;) instead of executing it again | [optional] |
 
 ### Return type
 

@@ -4,7 +4,7 @@ PHP client for a REST facade in front of the time recording system REINER SCT ti
 
 This project is not affiliated with, endorsed or sponsored by REINER SCT. REINER SCT and timeCard are trademarks of their respective owner.
 
-- API version `0.2.2`, namespace `TimecardClient`.
+- API version `0.3.0`, namespace `TimecardClient`.
 - Generated: `src/Api/*Api.php` (one class per tag), `src/Model/*`, `Configuration.php`, `ApiException.php`, `ObjectSerializer.php`, `docs/`.
 - Hand-written: `src/GoogleServiceAccountToken.php` (Google ID tokens), `src/ProblemDetails.php` (Problem Details).
 
@@ -15,7 +15,7 @@ Composer, with this repository as VCS source:
 ```json
 {
   "repositories": [{ "type": "vcs", "url": "https://github.com/Hoefer-Chemie-GmbH/timecard-client-php" }],
-  "require": { "timecard/client": "^0.2.2" }
+  "require": { "timecard/client": "^0.3.0" }
 }
 ```
 
@@ -117,7 +117,7 @@ The facade answers every error with an RFC 9457 Problem Details body. The genera
 - **Data.** The facade reads and changes the data of the connected time recording installation. Ask the operator whether a separate test installation exists; without one, development and tests work on real personal data and fall under the same data protection rules as production.
 - **Write access.** The operator can release write access for selected persons only, for example a test person during development; calls for other persons answer `403` without reaching the time recording system.
 - **Rate limit.** The facade limits the calls per service account (by default 120 per minute) and answers `429` above it; spread bulk processing over time.
-- **Retries.** Retry reads after `502` or `503` with a pause; the facade itself already retries a read once against the time recording system. Do not repeat a failed write blindly: the time recording system has no idempotency keys, so a repeated write can book twice; read the current state first.
+- **Retries.** Retry reads after `502` or `503` with a pause; the facade itself already retries a read once against the time recording system. Send creating calls (`POST`) with an `Idempotency-Key` header, e.g. a UUID per business operation, and repeat a failed call with the same key: the facade executes it once and answers a repeat with the stored response and the header `Idempotent-Replayed: true` (`409` if the first call has no result yet, `422` if the key was used for a different request). Do not repeat changing or deleting calls blindly; read the current state first.
 - **Audit.** The facade records every call with the service account, route, parameters and status.
 - **Versions.** Install a fixed version (Git tag) and update deliberately; before 1.0.0 a minor version may contain incompatible changes.
 
