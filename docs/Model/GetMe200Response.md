@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**issuer_name** | **string** |  |
+**issuerName** | **string** |  |
 **issuer** | **string** |  |
 **subject** | **string** |  |
-**display_name** | **string** |  |
+**displayName** | **string** |  |
 **scopes** | **string[]** |  |
-**token_expires_at** | **string** |  |
+**tokenExpiresAt** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

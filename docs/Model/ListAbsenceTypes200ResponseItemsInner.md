@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  |
-**order_no** | **int** |  |
+**orderNo** | **int** |  |
 **name** | **string** |  |
 **token** | **string** |  |
-**is_holiday** | **bool** |  |
+**isHoliday** | **bool** |  |
 **color** | **string** |  |
-**has_replace_time** | **bool** |  |
-**weighting_type** | **int** |  |
+**hasReplaceTime** | **bool** |  |
+**weightingType** | **int** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

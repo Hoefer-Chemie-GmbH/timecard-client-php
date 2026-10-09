@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **int** |  |
-**department_id** | **int** |  |
-**group_id** | **int** |  |
-**person_id** | **int** |  |
+**departmentId** | **int** |  |
+**groupId** | **int** |  |
+**personId** | **int** |  |
 **global** | **bool** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

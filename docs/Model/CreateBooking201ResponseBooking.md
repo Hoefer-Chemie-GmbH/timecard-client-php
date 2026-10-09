@@ -7,16 +7,16 @@ Name | Type | Description | Notes
 **id** | **int** |  |
 **type** | **string** |  |
 **timestamp** | **string** |  |
-**is_active** | **bool** |  |
-**is_month_closed** | **bool** |  |
+**isActive** | **bool** |  |
+**isMonthClosed** | **bool** |  |
 **creator** | **string** |  |
-**absence_type_id** | **int** |  |
-**absence_type_name** | **string** |  |
+**absenceTypeId** | **int** |  |
+**absenceTypeName** | **string** |  |
 **duration** | **string** |  |
-**project_id** | **int** |  |
-**project_name** | **string** |  |
-**work_operation_id** | **int** |  |
-**work_operation_name** | **string** |  |
+**projectId** | **int** |  |
+**projectName** | **string** |  |
+**workOperationId** | **int** |  |
+**workOperationName** | **string** |  |
 **comment** | **string** |  |
 **location** | [**\TimecardClient\Model\CreateBooking201ResponseBookingLocation**](CreateBooking201ResponseBookingLocation.md) |  |
 

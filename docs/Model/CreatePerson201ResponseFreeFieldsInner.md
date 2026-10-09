@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entry_id** | **int** |  |
-**free_field_id** | **int** |  |
+**entryId** | **int** |  |
+**freeFieldId** | **int** |  |
 **name** | **string** |  |
-**data_type** | **string** |  |
+**dataType** | **string** |  |
 **lookup** | [**\TimecardClient\Model\CreatePerson201ResponseFreeFieldsInnerLookupInner[]**](CreatePerson201ResponseFreeFieldsInnerLookupInner.md) |  |
 **value** | **string** |  |
 

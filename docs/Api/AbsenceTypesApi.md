@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getAbsenceType()`
 
 ```php
-getAbsenceType($absence_type_id): \TimecardClient\Model\GetAbsenceType200Response
+getAbsenceType($absenceTypeId): \TimecardClient\Model\GetAbsenceType200Response
 ```
 
 Absence type details
@@ -33,10 +33,10 @@ $apiInstance = new TimecardClient\Api\AbsenceTypesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$absence_type_id = 56; // int
+$absenceTypeId = 56; // int
 
 try {
-    $result = $apiInstance->getAbsenceType($absence_type_id);
+    $result = $apiInstance->getAbsenceType($absenceTypeId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AbsenceTypesApi->getAbsenceType: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **absence_type_id** | **int**|  | |
+| **absenceTypeId** | **int**|  | |
 
 ### Return type
 
@@ -69,7 +69,7 @@ try {
 ## `listAbsenceTypes()`
 
 ```php
-listAbsenceTypes($usage, $person_id, $date): \TimecardClient\Model\ListAbsenceTypes200Response
+listAbsenceTypes($usage, $personId, $date): \TimecardClient\Model\ListAbsenceTypes200Response
 ```
 
 Absence types
@@ -92,11 +92,11 @@ $apiInstance = new TimecardClient\Api\AbsenceTypesApi(
     $config
 );
 $usage = 'ALL'; // string
-$person_id = 56; // int
+$personId = 56; // int
 $date = 'date_example'; // string
 
 try {
-    $result = $apiInstance->listAbsenceTypes($usage, $person_id, $date);
+    $result = $apiInstance->listAbsenceTypes($usage, $personId, $date);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AbsenceTypesApi->listAbsenceTypes: ', $e->getMessage(), PHP_EOL;
@@ -108,7 +108,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **usage** | **string**|  | [optional] [default to &#39;ALL&#39;] |
-| **person_id** | **int**|  | [optional] |
+| **personId** | **int**|  | [optional] |
 | **date** | **string**|  | [optional] |
 
 ### Return type

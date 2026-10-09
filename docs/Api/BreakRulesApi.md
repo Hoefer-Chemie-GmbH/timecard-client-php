@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getBreakRule()`
 
 ```php
-getBreakRule($break_rule_id): \TimecardClient\Model\GetBreakRule200Response
+getBreakRule($breakRuleId): \TimecardClient\Model\GetBreakRule200Response
 ```
 
 Break rule details
@@ -33,10 +33,10 @@ $apiInstance = new TimecardClient\Api\BreakRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$break_rule_id = 56; // int
+$breakRuleId = 56; // int
 
 try {
-    $result = $apiInstance->getBreakRule($break_rule_id);
+    $result = $apiInstance->getBreakRule($breakRuleId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BreakRulesApi->getBreakRule: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **break_rule_id** | **int**|  | |
+| **breakRuleId** | **int**|  | |
 
 ### Return type
 
@@ -69,7 +69,7 @@ try {
 ## `listBreakRules()`
 
 ```php
-listBreakRules($active_only): \TimecardClient\Model\ListBreakRules200Response
+listBreakRules($activeOnly): \TimecardClient\Model\ListBreakRules200Response
 ```
 
 Break rules
@@ -91,10 +91,10 @@ $apiInstance = new TimecardClient\Api\BreakRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$active_only = 'active_only_example'; // string
+$activeOnly = 'activeOnly_example'; // string
 
 try {
-    $result = $apiInstance->listBreakRules($active_only);
+    $result = $apiInstance->listBreakRules($activeOnly);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BreakRulesApi->listBreakRules: ', $e->getMessage(), PHP_EOL;
@@ -105,7 +105,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **active_only** | **string**|  | [optional] |
+| **activeOnly** | **string**|  | [optional] |
 
 ### Return type
 

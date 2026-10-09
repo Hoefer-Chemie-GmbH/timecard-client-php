@@ -22,7 +22,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createCarryOver()`
 
 ```php
-createCarryOver($person_id, $calculation_id, $create_carry_over_request): \TimecardClient\Model\ListCarryOvers200ResponseItemsInner
+createCarryOver($personId, $calculationId, $createCarryOverRequest): \TimecardClient\Model\ListCarryOvers200ResponseItemsInner
 ```
 
 Create a manual carry-over (timeCard user right 223 create)
@@ -44,12 +44,12 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
-$calculation_id = 56; // int
-$create_carry_over_request = new \TimecardClient\Model\CreateCarryOverRequest(); // \TimecardClient\Model\CreateCarryOverRequest
+$personId = 56; // int
+$calculationId = 56; // int
+$createCarryOverRequest = new \TimecardClient\Model\CreateCarryOverRequest(); // \TimecardClient\Model\CreateCarryOverRequest
 
 try {
-    $result = $apiInstance->createCarryOver($person_id, $calculation_id, $create_carry_over_request);
+    $result = $apiInstance->createCarryOver($personId, $calculationId, $createCarryOverRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->createCarryOver: ', $e->getMessage(), PHP_EOL;
@@ -60,9 +60,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
-| **calculation_id** | **int**|  | |
-| **create_carry_over_request** | [**\TimecardClient\Model\CreateCarryOverRequest**](../Model/CreateCarryOverRequest.md)|  | |
+| **personId** | **int**|  | |
+| **calculationId** | **int**|  | |
+| **createCarryOverRequest** | [**\TimecardClient\Model\CreateCarryOverRequest**](../Model/CreateCarryOverRequest.md)|  | |
 
 ### Return type
 
@@ -84,7 +84,7 @@ try {
 ## `createPerson()`
 
 ```php
-createPerson($create_person_request): \TimecardClient\Model\CreatePerson201Response
+createPerson($createPersonRequest): \TimecardClient\Model\CreatePerson201Response
 ```
 
 Create a person (with isEmployee consumes an employee licence)
@@ -106,10 +106,10 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_person_request = new \TimecardClient\Model\CreatePersonRequest(); // \TimecardClient\Model\CreatePersonRequest
+$createPersonRequest = new \TimecardClient\Model\CreatePersonRequest(); // \TimecardClient\Model\CreatePersonRequest
 
 try {
-    $result = $apiInstance->createPerson($create_person_request);
+    $result = $apiInstance->createPerson($createPersonRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->createPerson: ', $e->getMessage(), PHP_EOL;
@@ -120,7 +120,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_person_request** | [**\TimecardClient\Model\CreatePersonRequest**](../Model/CreatePersonRequest.md)|  | |
+| **createPersonRequest** | [**\TimecardClient\Model\CreatePersonRequest**](../Model/CreatePersonRequest.md)|  | |
 
 ### Return type
 
@@ -142,7 +142,7 @@ try {
 ## `deleteCarryOver()`
 
 ```php
-deleteCarryOver($person_id, $calculation_id, $balance_id, $month)
+deleteCarryOver($personId, $calculationId, $balanceId, $month)
 ```
 
 Delete a manual carry-over (timeCard user right 223 delete)
@@ -164,13 +164,13 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
-$calculation_id = 56; // int
-$balance_id = 56; // int
+$personId = 56; // int
+$calculationId = 56; // int
+$balanceId = 56; // int
 $month = 'month_example'; // string | month of the carry-over; when given, the state before deletion is recorded in the audit
 
 try {
-    $apiInstance->deleteCarryOver($person_id, $calculation_id, $balance_id, $month);
+    $apiInstance->deleteCarryOver($personId, $calculationId, $balanceId, $month);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->deleteCarryOver: ', $e->getMessage(), PHP_EOL;
 }
@@ -180,9 +180,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
-| **calculation_id** | **int**|  | |
-| **balance_id** | **int**|  | |
+| **personId** | **int**|  | |
+| **calculationId** | **int**|  | |
+| **balanceId** | **int**|  | |
 | **month** | **string**| month of the carry-over; when given, the state before deletion is recorded in the audit | [optional] |
 
 ### Return type
@@ -205,7 +205,7 @@ void (empty response body)
 ## `getPerson()`
 
 ```php
-getPerson($person_id): \TimecardClient\Model\GetPerson200Response
+getPerson($personId): \TimecardClient\Model\GetPerson200Response
 ```
 
 Read a person
@@ -227,10 +227,10 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
+$personId = 56; // int
 
 try {
-    $result = $apiInstance->getPerson($person_id);
+    $result = $apiInstance->getPerson($personId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->getPerson: ', $e->getMessage(), PHP_EOL;
@@ -241,7 +241,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 
 ### Return type
 
@@ -263,7 +263,7 @@ try {
 ## `getPersonByPersonNo()`
 
 ```php
-getPersonByPersonNo($person_no): \TimecardClient\Model\GetPerson200Response
+getPersonByPersonNo($personNo): \TimecardClient\Model\GetPerson200Response
 ```
 
 Read a person by personnel number
@@ -285,10 +285,10 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_no = 'person_no_example'; // string
+$personNo = 'personNo_example'; // string
 
 try {
-    $result = $apiInstance->getPersonByPersonNo($person_no);
+    $result = $apiInstance->getPersonByPersonNo($personNo);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->getPersonByPersonNo: ', $e->getMessage(), PHP_EOL;
@@ -299,7 +299,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_no** | **string**|  | |
+| **personNo** | **string**|  | |
 
 ### Return type
 
@@ -321,7 +321,7 @@ try {
 ## `getPersonPhoto()`
 
 ```php
-getPersonPhoto($person_id)
+getPersonPhoto($personId)
 ```
 
 Photo of the person (JPEG); 404 if no photo is stored
@@ -343,10 +343,10 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
+$personId = 56; // int
 
 try {
-    $apiInstance->getPersonPhoto($person_id);
+    $apiInstance->getPersonPhoto($personId);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->getPersonPhoto: ', $e->getMessage(), PHP_EOL;
 }
@@ -356,7 +356,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 
 ### Return type
 
@@ -378,7 +378,7 @@ void (empty response body)
 ## `listCalculationAccounts()`
 
 ```php
-listCalculationAccounts($person_id, $date): \TimecardClient\Model\ListCalculationAccounts200Response
+listCalculationAccounts($personId, $date): \TimecardClient\Model\ListCalculationAccounts200Response
 ```
 
 Calculation accounts of the person at a date
@@ -400,11 +400,11 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
+$personId = 56; // int
 $date = 'date_example'; // string | reference date; defaults to today
 
 try {
-    $result = $apiInstance->listCalculationAccounts($person_id, $date);
+    $result = $apiInstance->listCalculationAccounts($personId, $date);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->listCalculationAccounts: ', $e->getMessage(), PHP_EOL;
@@ -415,7 +415,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 | **date** | **string**| reference date; defaults to today | [optional] |
 
 ### Return type
@@ -438,7 +438,7 @@ try {
 ## `listCarryOvers()`
 
 ```php
-listCarryOvers($month, $person_id, $calculation_id): \TimecardClient\Model\ListCarryOvers200Response
+listCarryOvers($month, $personId, $calculationId): \TimecardClient\Model\ListCarryOvers200Response
 ```
 
 Manual carry-overs of a month
@@ -461,11 +461,11 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     $config
 );
 $month = 'month_example'; // string
-$person_id = 56; // int
-$calculation_id = 56; // int
+$personId = 56; // int
+$calculationId = 56; // int
 
 try {
-    $result = $apiInstance->listCarryOvers($month, $person_id, $calculation_id);
+    $result = $apiInstance->listCarryOvers($month, $personId, $calculationId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->listCarryOvers: ', $e->getMessage(), PHP_EOL;
@@ -477,8 +477,8 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **month** | **string**|  | |
-| **person_id** | **int**|  | |
-| **calculation_id** | **int**|  | |
+| **personId** | **int**|  | |
+| **calculationId** | **int**|  | |
 
 ### Return type
 
@@ -500,7 +500,7 @@ try {
 ## `listPersons()`
 
 ```php
-listPersons($state, $department, $person_no, $search, $include_admin, $page, $page_size): \TimecardClient\Model\ListPersons200Response
+listPersons($state, $department, $personNo, $search, $includeAdmin, $page, $pageSize): \TimecardClient\Model\ListPersons200Response
 ```
 
 List persons
@@ -524,14 +524,14 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
 );
 $state = 'state_example'; // string
 $department = 'department_example'; // string
-$person_no = 'person_no_example'; // string
+$personNo = 'personNo_example'; // string
 $search = 'search_example'; // string
-$include_admin = 'include_admin_example'; // string
+$includeAdmin = 'includeAdmin_example'; // string
 $page = 1; // int
-$page_size = 100; // int
+$pageSize = 100; // int
 
 try {
-    $result = $apiInstance->listPersons($state, $department, $person_no, $search, $include_admin, $page, $page_size);
+    $result = $apiInstance->listPersons($state, $department, $personNo, $search, $includeAdmin, $page, $pageSize);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->listPersons: ', $e->getMessage(), PHP_EOL;
@@ -544,11 +544,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **state** | **string**|  | [optional] |
 | **department** | **string**|  | [optional] |
-| **person_no** | **string**|  | [optional] |
+| **personNo** | **string**|  | [optional] |
 | **search** | **string**|  | [optional] |
-| **include_admin** | **string**|  | [optional] |
+| **includeAdmin** | **string**|  | [optional] |
 | **page** | **int**|  | [optional] [default to 1] |
-| **page_size** | **int**|  | [optional] [default to 100] |
+| **pageSize** | **int**|  | [optional] [default to 100] |
 
 ### Return type
 
@@ -570,7 +570,7 @@ try {
 ## `putPersonPhoto()`
 
 ```php
-putPersonPhoto($person_id, $body)
+putPersonPhoto($personId, $body)
 ```
 
 Store or replace the photo of the person (body: image/jpeg, at most 2 MB)
@@ -592,11 +592,11 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
+$personId = 56; // int
 $body = '/path/to/file.txt'; // \SplFileObject | raw body of type image/jpeg
 
 try {
-    $apiInstance->putPersonPhoto($person_id, $body);
+    $apiInstance->putPersonPhoto($personId, $body);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->putPersonPhoto: ', $e->getMessage(), PHP_EOL;
 }
@@ -606,7 +606,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 | **body** | **\SplFileObject****\SplFileObject**| raw body of type image/jpeg | |
 
 ### Return type
@@ -629,7 +629,7 @@ void (empty response body)
 ## `replaceCarryOver()`
 
 ```php
-replaceCarryOver($person_id, $calculation_id, $balance_id, $create_carry_over_request): \TimecardClient\Model\ListCarryOvers200ResponseItemsInner
+replaceCarryOver($personId, $calculationId, $balanceId, $createCarryOverRequest): \TimecardClient\Model\ListCarryOvers200ResponseItemsInner
 ```
 
 Replace a manual carry-over (the carry-over must exist in the month of balanceDate)
@@ -651,13 +651,13 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
-$calculation_id = 56; // int
-$balance_id = 56; // int
-$create_carry_over_request = new \TimecardClient\Model\CreateCarryOverRequest(); // \TimecardClient\Model\CreateCarryOverRequest
+$personId = 56; // int
+$calculationId = 56; // int
+$balanceId = 56; // int
+$createCarryOverRequest = new \TimecardClient\Model\CreateCarryOverRequest(); // \TimecardClient\Model\CreateCarryOverRequest
 
 try {
-    $result = $apiInstance->replaceCarryOver($person_id, $calculation_id, $balance_id, $create_carry_over_request);
+    $result = $apiInstance->replaceCarryOver($personId, $calculationId, $balanceId, $createCarryOverRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->replaceCarryOver: ', $e->getMessage(), PHP_EOL;
@@ -668,10 +668,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
-| **calculation_id** | **int**|  | |
-| **balance_id** | **int**|  | |
-| **create_carry_over_request** | [**\TimecardClient\Model\CreateCarryOverRequest**](../Model/CreateCarryOverRequest.md)|  | |
+| **personId** | **int**|  | |
+| **calculationId** | **int**|  | |
+| **balanceId** | **int**|  | |
+| **createCarryOverRequest** | [**\TimecardClient\Model\CreateCarryOverRequest**](../Model/CreateCarryOverRequest.md)|  | |
 
 ### Return type
 
@@ -693,7 +693,7 @@ try {
 ## `updatePerson()`
 
 ```php
-updatePerson($person_id, $update_person_request): \TimecardClient\Model\GetPerson200Response
+updatePerson($personId, $updatePersonRequest): \TimecardClient\Model\GetPerson200Response
 ```
 
 Partially update a person (JSON merge patch on the writable fields)
@@ -715,11 +715,11 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
-$update_person_request = new \TimecardClient\Model\UpdatePersonRequest(); // \TimecardClient\Model\UpdatePersonRequest
+$personId = 56; // int
+$updatePersonRequest = new \TimecardClient\Model\UpdatePersonRequest(); // \TimecardClient\Model\UpdatePersonRequest
 
 try {
-    $result = $apiInstance->updatePerson($person_id, $update_person_request);
+    $result = $apiInstance->updatePerson($personId, $updatePersonRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->updatePerson: ', $e->getMessage(), PHP_EOL;
@@ -730,8 +730,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
-| **update_person_request** | [**\TimecardClient\Model\UpdatePersonRequest**](../Model/UpdatePersonRequest.md)|  | |
+| **personId** | **int**|  | |
+| **updatePersonRequest** | [**\TimecardClient\Model\UpdatePersonRequest**](../Model/UpdatePersonRequest.md)|  | |
 
 ### Return type
 
@@ -753,7 +753,7 @@ try {
 ## `upsertPersonByPersonNo()`
 
 ```php
-upsertPersonByPersonNo($person_no, $upsert_person_by_person_no_request): \TimecardClient\Model\GetPerson200Response
+upsertPersonByPersonNo($personNo, $upsertPersonByPersonNoRequest): \TimecardClient\Model\GetPerson200Response
 ```
 
 Create or update a person by personnel number (upsert for HR synchronisation)
@@ -775,11 +775,11 @@ $apiInstance = new TimecardClient\Api\PersonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_no = 'person_no_example'; // string
-$upsert_person_by_person_no_request = new \TimecardClient\Model\UpsertPersonByPersonNoRequest(); // \TimecardClient\Model\UpsertPersonByPersonNoRequest
+$personNo = 'personNo_example'; // string
+$upsertPersonByPersonNoRequest = new \TimecardClient\Model\UpsertPersonByPersonNoRequest(); // \TimecardClient\Model\UpsertPersonByPersonNoRequest
 
 try {
-    $result = $apiInstance->upsertPersonByPersonNo($person_no, $upsert_person_by_person_no_request);
+    $result = $apiInstance->upsertPersonByPersonNo($personNo, $upsertPersonByPersonNoRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonsApi->upsertPersonByPersonNo: ', $e->getMessage(), PHP_EOL;
@@ -790,8 +790,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_no** | **string**|  | |
-| **upsert_person_by_person_no_request** | [**\TimecardClient\Model\UpsertPersonByPersonNoRequest**](../Model/UpsertPersonByPersonNoRequest.md)|  | |
+| **personNo** | **string**|  | |
+| **upsertPersonByPersonNoRequest** | [**\TimecardClient\Model\UpsertPersonByPersonNoRequest**](../Model/UpsertPersonByPersonNoRequest.md)|  | |
 
 ### Return type
 

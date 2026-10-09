@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **items** | [**\TimecardClient\Model\ListAuditEvents200ResponseItemsInner[]**](ListAuditEvents200ResponseItemsInner.md) |  |
 **total** | **int** |  |
 **page** | **int** |  |
-**page_size** | **int** |  |
+**pageSize** | **int** |  |
 **from** | **string** |  |
 **to** | **string** |  |
 

@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createWorkOperation()`
 
 ```php
-createWorkOperation($create_work_operation_request): \TimecardClient\Model\CreateWorkOperation201Response
+createWorkOperation($createWorkOperationRequest): \TimecardClient\Model\CreateWorkOperation201Response
 ```
 
 Create a work operation (timeCard user right 213 create)
@@ -37,10 +37,10 @@ $apiInstance = new TimecardClient\Api\WorkOperationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_work_operation_request = new \TimecardClient\Model\CreateWorkOperationRequest(); // \TimecardClient\Model\CreateWorkOperationRequest
+$createWorkOperationRequest = new \TimecardClient\Model\CreateWorkOperationRequest(); // \TimecardClient\Model\CreateWorkOperationRequest
 
 try {
-    $result = $apiInstance->createWorkOperation($create_work_operation_request);
+    $result = $apiInstance->createWorkOperation($createWorkOperationRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WorkOperationsApi->createWorkOperation: ', $e->getMessage(), PHP_EOL;
@@ -51,7 +51,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_work_operation_request** | [**\TimecardClient\Model\CreateWorkOperationRequest**](../Model/CreateWorkOperationRequest.md)|  | |
+| **createWorkOperationRequest** | [**\TimecardClient\Model\CreateWorkOperationRequest**](../Model/CreateWorkOperationRequest.md)|  | |
 
 ### Return type
 
@@ -73,7 +73,7 @@ try {
 ## `deleteWorkOperation()`
 
 ```php
-deleteWorkOperation($work_operation_id)
+deleteWorkOperation($workOperationId)
 ```
 
 Delete a work operation (timeCard user right 213 delete; a used work operation is rejected by timeCard)
@@ -95,10 +95,10 @@ $apiInstance = new TimecardClient\Api\WorkOperationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$work_operation_id = 56; // int
+$workOperationId = 56; // int
 
 try {
-    $apiInstance->deleteWorkOperation($work_operation_id);
+    $apiInstance->deleteWorkOperation($workOperationId);
 } catch (Exception $e) {
     echo 'Exception when calling WorkOperationsApi->deleteWorkOperation: ', $e->getMessage(), PHP_EOL;
 }
@@ -108,7 +108,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **work_operation_id** | **int**|  | |
+| **workOperationId** | **int**|  | |
 
 ### Return type
 
@@ -130,7 +130,7 @@ void (empty response body)
 ## `getWorkOperation()`
 
 ```php
-getWorkOperation($work_operation_id): \TimecardClient\Model\CreateWorkOperation201Response
+getWorkOperation($workOperationId): \TimecardClient\Model\CreateWorkOperation201Response
 ```
 
 Work operation details
@@ -152,10 +152,10 @@ $apiInstance = new TimecardClient\Api\WorkOperationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$work_operation_id = 56; // int
+$workOperationId = 56; // int
 
 try {
-    $result = $apiInstance->getWorkOperation($work_operation_id);
+    $result = $apiInstance->getWorkOperation($workOperationId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WorkOperationsApi->getWorkOperation: ', $e->getMessage(), PHP_EOL;
@@ -166,7 +166,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **work_operation_id** | **int**|  | |
+| **workOperationId** | **int**|  | |
 
 ### Return type
 
@@ -188,7 +188,7 @@ try {
 ## `listProjectWorkOperations()`
 
 ```php
-listProjectWorkOperations($project_id): \TimecardClient\Model\ListProjectWorkOperations200Response
+listProjectWorkOperations($projectId): \TimecardClient\Model\ListProjectWorkOperations200Response
 ```
 
 Work operations allowed for a project
@@ -210,10 +210,10 @@ $apiInstance = new TimecardClient\Api\WorkOperationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$project_id = 56; // int
+$projectId = 56; // int
 
 try {
-    $result = $apiInstance->listProjectWorkOperations($project_id);
+    $result = $apiInstance->listProjectWorkOperations($projectId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WorkOperationsApi->listProjectWorkOperations: ', $e->getMessage(), PHP_EOL;
@@ -224,7 +224,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **project_id** | **int**|  | |
+| **projectId** | **int**|  | |
 
 ### Return type
 
@@ -301,7 +301,7 @@ This endpoint does not need any parameter.
 ## `updateWorkOperation()`
 
 ```php
-updateWorkOperation($work_operation_id, $update_work_operation_request): \TimecardClient\Model\CreateWorkOperation201Response
+updateWorkOperation($workOperationId, $updateWorkOperationRequest): \TimecardClient\Model\CreateWorkOperation201Response
 ```
 
 Change a work operation (read-modify-write, timeCard user right 213 update)
@@ -323,11 +323,11 @@ $apiInstance = new TimecardClient\Api\WorkOperationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$work_operation_id = 56; // int
-$update_work_operation_request = new \TimecardClient\Model\UpdateWorkOperationRequest(); // \TimecardClient\Model\UpdateWorkOperationRequest
+$workOperationId = 56; // int
+$updateWorkOperationRequest = new \TimecardClient\Model\UpdateWorkOperationRequest(); // \TimecardClient\Model\UpdateWorkOperationRequest
 
 try {
-    $result = $apiInstance->updateWorkOperation($work_operation_id, $update_work_operation_request);
+    $result = $apiInstance->updateWorkOperation($workOperationId, $updateWorkOperationRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WorkOperationsApi->updateWorkOperation: ', $e->getMessage(), PHP_EOL;
@@ -338,8 +338,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **work_operation_id** | **int**|  | |
-| **update_work_operation_request** | [**\TimecardClient\Model\UpdateWorkOperationRequest**](../Model/UpdateWorkOperationRequest.md)|  | |
+| **workOperationId** | **int**|  | |
+| **updateWorkOperationRequest** | [**\TimecardClient\Model\UpdateWorkOperationRequest**](../Model/UpdateWorkOperationRequest.md)|  | |
 
 ### Return type
 

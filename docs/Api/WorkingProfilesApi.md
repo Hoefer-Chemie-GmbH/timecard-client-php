@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getWorkingProfile()`
 
 ```php
-getWorkingProfile($working_profile_id): \TimecardClient\Model\GetWorkingProfile200Response
+getWorkingProfile($workingProfileId): \TimecardClient\Model\GetWorkingProfile200Response
 ```
 
 Working time profile details
@@ -33,10 +33,10 @@ $apiInstance = new TimecardClient\Api\WorkingProfilesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$working_profile_id = 56; // int
+$workingProfileId = 56; // int
 
 try {
-    $result = $apiInstance->getWorkingProfile($working_profile_id);
+    $result = $apiInstance->getWorkingProfile($workingProfileId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WorkingProfilesApi->getWorkingProfile: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **working_profile_id** | **int**|  | |
+| **workingProfileId** | **int**|  | |
 
 ### Return type
 
@@ -69,7 +69,7 @@ try {
 ## `listWorkingProfiles()`
 
 ```php
-listWorkingProfiles($active_only, $correction_only): \TimecardClient\Model\ListWorkingProfiles200Response
+listWorkingProfiles($activeOnly, $correctionOnly): \TimecardClient\Model\ListWorkingProfiles200Response
 ```
 
 Working time profiles
@@ -91,11 +91,11 @@ $apiInstance = new TimecardClient\Api\WorkingProfilesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$active_only = 'active_only_example'; // string
-$correction_only = 'correction_only_example'; // string
+$activeOnly = 'activeOnly_example'; // string
+$correctionOnly = 'correctionOnly_example'; // string
 
 try {
-    $result = $apiInstance->listWorkingProfiles($active_only, $correction_only);
+    $result = $apiInstance->listWorkingProfiles($activeOnly, $correctionOnly);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WorkingProfilesApi->listWorkingProfiles: ', $e->getMessage(), PHP_EOL;
@@ -106,8 +106,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **active_only** | **string**|  | [optional] |
-| **correction_only** | **string**|  | [optional] |
+| **activeOnly** | **string**|  | [optional] |
+| **correctionOnly** | **string**|  | [optional] |
 
 ### Return type
 

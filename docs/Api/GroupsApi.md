@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getGroup()`
 
 ```php
-getGroup($group_id): \TimecardClient\Model\GetDepartment200Response
+getGroup($groupId): \TimecardClient\Model\GetDepartment200Response
 ```
 
 Group details
@@ -34,10 +34,10 @@ $apiInstance = new TimecardClient\Api\GroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$group_id = 56; // int
+$groupId = 56; // int
 
 try {
-    $result = $apiInstance->getGroup($group_id);
+    $result = $apiInstance->getGroup($groupId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupsApi->getGroup: ', $e->getMessage(), PHP_EOL;
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **group_id** | **int**|  | |
+| **groupId** | **int**|  | |
 
 ### Return type
 
@@ -70,7 +70,7 @@ try {
 ## `listGroupMembers()`
 
 ```php
-listGroupMembers($group_id): \TimecardClient\Model\ListDepartmentMembers200Response
+listGroupMembers($groupId): \TimecardClient\Model\ListDepartmentMembers200Response
 ```
 
 Members as of today (without the leader unless the leader is a member)
@@ -92,10 +92,10 @@ $apiInstance = new TimecardClient\Api\GroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$group_id = 56; // int
+$groupId = 56; // int
 
 try {
-    $result = $apiInstance->listGroupMembers($group_id);
+    $result = $apiInstance->listGroupMembers($groupId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupsApi->listGroupMembers: ', $e->getMessage(), PHP_EOL;
@@ -106,7 +106,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **group_id** | **int**|  | |
+| **groupId** | **int**|  | |
 
 ### Return type
 

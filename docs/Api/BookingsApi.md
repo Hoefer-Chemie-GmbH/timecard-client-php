@@ -22,7 +22,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `assignWorkingProfile()`
 
 ```php
-assignWorkingProfile($assign_working_profile_request): \TimecardClient\Model\AssignWorkingProfile201Response
+assignWorkingProfile($assignWorkingProfileRequest): \TimecardClient\Model\AssignWorkingProfile201Response
 ```
 
 Assign an optional working time profile to persons for a period (timeCard user right 250)
@@ -44,10 +44,10 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$assign_working_profile_request = new \TimecardClient\Model\AssignWorkingProfileRequest(); // \TimecardClient\Model\AssignWorkingProfileRequest
+$assignWorkingProfileRequest = new \TimecardClient\Model\AssignWorkingProfileRequest(); // \TimecardClient\Model\AssignWorkingProfileRequest
 
 try {
-    $result = $apiInstance->assignWorkingProfile($assign_working_profile_request);
+    $result = $apiInstance->assignWorkingProfile($assignWorkingProfileRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->assignWorkingProfile: ', $e->getMessage(), PHP_EOL;
@@ -58,7 +58,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **assign_working_profile_request** | [**\TimecardClient\Model\AssignWorkingProfileRequest**](../Model/AssignWorkingProfileRequest.md)|  | |
+| **assignWorkingProfileRequest** | [**\TimecardClient\Model\AssignWorkingProfileRequest**](../Model/AssignWorkingProfileRequest.md)|  | |
 
 ### Return type
 
@@ -80,7 +80,7 @@ try {
 ## `createAbsenceBooking()`
 
 ```php
-createAbsenceBooking($create_absence_booking_request, $calculate): \TimecardClient\Model\CreateAbsenceBooking201Response
+createAbsenceBooking($createAbsenceBookingRequest, $calculate): \TimecardClient\Model\CreateAbsenceBooking201Response
 ```
 
 Book an absence for a period (one or more persons); timeCard returns no booking id, the day list shows the booking as ABSENCE
@@ -102,11 +102,11 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_absence_booking_request = new \TimecardClient\Model\CreateAbsenceBookingRequest(); // \TimecardClient\Model\CreateAbsenceBookingRequest
+$createAbsenceBookingRequest = new \TimecardClient\Model\CreateAbsenceBookingRequest(); // \TimecardClient\Model\CreateAbsenceBookingRequest
 $calculate = 'calculate_example'; // string | false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards
 
 try {
-    $result = $apiInstance->createAbsenceBooking($create_absence_booking_request, $calculate);
+    $result = $apiInstance->createAbsenceBooking($createAbsenceBookingRequest, $calculate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->createAbsenceBooking: ', $e->getMessage(), PHP_EOL;
@@ -117,7 +117,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_absence_booking_request** | [**\TimecardClient\Model\CreateAbsenceBookingRequest**](../Model/CreateAbsenceBookingRequest.md)|  | |
+| **createAbsenceBookingRequest** | [**\TimecardClient\Model\CreateAbsenceBookingRequest**](../Model/CreateAbsenceBookingRequest.md)|  | |
 | **calculate** | **string**| false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards | [optional] |
 
 ### Return type
@@ -140,7 +140,7 @@ try {
 ## `createBooking()`
 
 ```php
-createBooking($create_booking_request, $calculate): \TimecardClient\Model\CreateBooking201Response
+createBooking($createBookingRequest, $calculate): \TimecardClient\Model\CreateBooking201Response
 ```
 
 Create a time or project booking
@@ -162,11 +162,11 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_booking_request = new \TimecardClient\Model\CreateBookingRequest(); // \TimecardClient\Model\CreateBookingRequest
+$createBookingRequest = new \TimecardClient\Model\CreateBookingRequest(); // \TimecardClient\Model\CreateBookingRequest
 $calculate = 'calculate_example'; // string | false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards
 
 try {
-    $result = $apiInstance->createBooking($create_booking_request, $calculate);
+    $result = $apiInstance->createBooking($createBookingRequest, $calculate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->createBooking: ', $e->getMessage(), PHP_EOL;
@@ -177,7 +177,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_booking_request** | [**\TimecardClient\Model\CreateBookingRequest**](../Model/CreateBookingRequest.md)|  | |
+| **createBookingRequest** | [**\TimecardClient\Model\CreateBookingRequest**](../Model/CreateBookingRequest.md)|  | |
 | **calculate** | **string**| false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards | [optional] |
 
 ### Return type
@@ -200,7 +200,7 @@ try {
 ## `deleteBooking()`
 
 ```php
-deleteBooking($person_id, $booking_id, $calculate)
+deleteBooking($personId, $bookingId, $calculate)
 ```
 
 Delete a booking (for absence bookings timeCard deletes the whole period)
@@ -222,12 +222,12 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
-$booking_id = 56; // int
+$personId = 56; // int
+$bookingId = 56; // int
 $calculate = 'calculate_example'; // string | false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards
 
 try {
-    $apiInstance->deleteBooking($person_id, $booking_id, $calculate);
+    $apiInstance->deleteBooking($personId, $bookingId, $calculate);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->deleteBooking: ', $e->getMessage(), PHP_EOL;
 }
@@ -237,8 +237,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
-| **booking_id** | **int**|  | |
+| **personId** | **int**|  | |
+| **bookingId** | **int**|  | |
 | **calculate** | **string**| false: variant without immediate recalculation (bulk import); balances are temporarily stale afterwards | [optional] |
 
 ### Return type
@@ -319,7 +319,7 @@ try {
 ## `getBooking()`
 
 ```php
-getBooking($booking_id): \TimecardClient\Model\GetBooking200Response
+getBooking($bookingId): \TimecardClient\Model\GetBooking200Response
 ```
 
 Booking details (recorded bookings only; calculated breaks and system bookings return 404)
@@ -341,10 +341,10 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$booking_id = 56; // int
+$bookingId = 56; // int
 
 try {
-    $result = $apiInstance->getBooking($booking_id);
+    $result = $apiInstance->getBooking($bookingId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->getBooking: ', $e->getMessage(), PHP_EOL;
@@ -355,7 +355,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **booking_id** | **int**|  | |
+| **bookingId** | **int**|  | |
 
 ### Return type
 
@@ -377,7 +377,7 @@ try {
 ## `getDailyBalance()`
 
 ```php
-getDailyBalance($date, $person_id, $month_overview): \TimecardClient\Model\GetDailyBalance200Response
+getDailyBalance($date, $personId, $monthOverview): \TimecardClient\Model\GetDailyBalance200Response
 ```
 
 Daily balance of a person
@@ -400,11 +400,11 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     $config
 );
 $date = 'date_example'; // string
-$person_id = 56; // int
-$month_overview = 'month_overview_example'; // string
+$personId = 56; // int
+$monthOverview = 'monthOverview_example'; // string
 
 try {
-    $result = $apiInstance->getDailyBalance($date, $person_id, $month_overview);
+    $result = $apiInstance->getDailyBalance($date, $personId, $monthOverview);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->getDailyBalance: ', $e->getMessage(), PHP_EOL;
@@ -416,8 +416,8 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **date** | **string**|  | |
-| **person_id** | **int**|  | |
-| **month_overview** | **string**|  | [optional] |
+| **personId** | **int**|  | |
+| **monthOverview** | **string**|  | [optional] |
 
 ### Return type
 
@@ -439,7 +439,7 @@ try {
 ## `getPersonAbsenceOverview()`
 
 ```php
-getPersonAbsenceOverview($year, $person_id): \TimecardClient\Model\GetPersonAbsenceOverview200Response
+getPersonAbsenceOverview($year, $personId): \TimecardClient\Model\GetPersonAbsenceOverview200Response
 ```
 
 Absence overview of a person per month of a year
@@ -462,10 +462,10 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     $config
 );
 $year = 56; // int
-$person_id = 56; // int
+$personId = 56; // int
 
 try {
-    $result = $apiInstance->getPersonAbsenceOverview($year, $person_id);
+    $result = $apiInstance->getPersonAbsenceOverview($year, $personId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->getPersonAbsenceOverview: ', $e->getMessage(), PHP_EOL;
@@ -477,7 +477,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **year** | **int**|  | |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 
 ### Return type
 
@@ -499,7 +499,7 @@ try {
 ## `getPersonCalendar()`
 
 ```php
-getPersonCalendar($month, $person_id, $public_holidays_only): \TimecardClient\Model\GetPersonCalendar200Response
+getPersonCalendar($month, $personId, $publicHolidaysOnly): \TimecardClient\Model\GetPersonCalendar200Response
 ```
 
 Calendar (public holidays, absences, sickness, irregularities) for two months from the given month
@@ -522,11 +522,11 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     $config
 );
 $month = 'month_example'; // string
-$person_id = 56; // int
-$public_holidays_only = 'public_holidays_only_example'; // string
+$personId = 56; // int
+$publicHolidaysOnly = 'publicHolidaysOnly_example'; // string
 
 try {
-    $result = $apiInstance->getPersonCalendar($month, $person_id, $public_holidays_only);
+    $result = $apiInstance->getPersonCalendar($month, $personId, $publicHolidaysOnly);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->getPersonCalendar: ', $e->getMessage(), PHP_EOL;
@@ -538,8 +538,8 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **month** | **string**|  | |
-| **person_id** | **int**|  | |
-| **public_holidays_only** | **string**|  | [optional] |
+| **personId** | **int**|  | |
+| **publicHolidaysOnly** | **string**|  | [optional] |
 
 ### Return type
 
@@ -561,7 +561,7 @@ try {
 ## `listBookings()`
 
 ```php
-listBookings($person_id, $date, $from, $to): \TimecardClient\Model\ListPersonBookings200Response
+listBookings($personId, $date, $from, $to): \TimecardClient\Model\ListPersonBookings200Response
 ```
 
 Bookings (alias of /persons/{id}/bookings)
@@ -583,13 +583,13 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
+$personId = 56; // int
 $date = 'date_example'; // string
 $from = 'from_example'; // string
 $to = 'to_example'; // string
 
 try {
-    $result = $apiInstance->listBookings($person_id, $date, $from, $to);
+    $result = $apiInstance->listBookings($personId, $date, $from, $to);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->listBookings: ', $e->getMessage(), PHP_EOL;
@@ -600,7 +600,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 | **date** | **string**|  | [optional] |
 | **from** | **string**|  | [optional] |
 | **to** | **string**|  | [optional] |
@@ -625,7 +625,7 @@ try {
 ## `listPersonBookings()`
 
 ```php
-listPersonBookings($person_id, $date, $from, $to): \TimecardClient\Model\ListPersonBookings200Response
+listPersonBookings($personId, $date, $from, $to): \TimecardClient\Model\ListPersonBookings200Response
 ```
 
 Bookings of a person (single day or range, max. 31 days)
@@ -647,13 +647,13 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
+$personId = 56; // int
 $date = 'date_example'; // string
 $from = 'from_example'; // string
 $to = 'to_example'; // string
 
 try {
-    $result = $apiInstance->listPersonBookings($person_id, $date, $from, $to);
+    $result = $apiInstance->listPersonBookings($personId, $date, $from, $to);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->listPersonBookings: ', $e->getMessage(), PHP_EOL;
@@ -664,7 +664,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 | **date** | **string**|  | [optional] |
 | **from** | **string**|  | [optional] |
 | **to** | **string**|  | [optional] |
@@ -689,7 +689,7 @@ try {
 ## `removeWorkingProfileAssignment()`
 
 ```php
-removeWorkingProfileAssignment($person_id, $from, $to)
+removeWorkingProfileAssignment($personId, $from, $to)
 ```
 
 Remove the optional working time profile of a person for a period (timeCard user right 250)
@@ -711,12 +711,12 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int
+$personId = 56; // int
 $from = 'from_example'; // string
 $to = 'to_example'; // string
 
 try {
-    $apiInstance->removeWorkingProfileAssignment($person_id, $from, $to);
+    $apiInstance->removeWorkingProfileAssignment($personId, $from, $to);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->removeWorkingProfileAssignment: ', $e->getMessage(), PHP_EOL;
 }
@@ -726,7 +726,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**|  | |
+| **personId** | **int**|  | |
 | **from** | **string**|  | |
 | **to** | **string**|  | |
 
@@ -750,7 +750,7 @@ void (empty response body)
 ## `updateBooking()`
 
 ```php
-updateBooking($person_id, $booking_id, $update_booking_request): \TimecardClient\Model\GetBooking200Response
+updateBooking($personId, $bookingId, $updateBookingRequest): \TimecardClient\Model\GetBooking200Response
 ```
 
 Update a booking (timestamp, absence type, project, work operation, comment)
@@ -772,12 +772,12 @@ $apiInstance = new TimecardClient\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$person_id = 56; // int | person the booking belongs to
-$booking_id = 56; // int
-$update_booking_request = new \TimecardClient\Model\UpdateBookingRequest(); // \TimecardClient\Model\UpdateBookingRequest
+$personId = 56; // int | person the booking belongs to
+$bookingId = 56; // int
+$updateBookingRequest = new \TimecardClient\Model\UpdateBookingRequest(); // \TimecardClient\Model\UpdateBookingRequest
 
 try {
-    $result = $apiInstance->updateBooking($person_id, $booking_id, $update_booking_request);
+    $result = $apiInstance->updateBooking($personId, $bookingId, $updateBookingRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->updateBooking: ', $e->getMessage(), PHP_EOL;
@@ -788,9 +788,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **person_id** | **int**| person the booking belongs to | |
-| **booking_id** | **int**|  | |
-| **update_booking_request** | [**\TimecardClient\Model\UpdateBookingRequest**](../Model/UpdateBookingRequest.md)|  | |
+| **personId** | **int**| person the booking belongs to | |
+| **bookingId** | **int**|  | |
+| **updateBookingRequest** | [**\TimecardClient\Model\UpdateBookingRequest**](../Model/UpdateBookingRequest.md)|  | |
 
 ### Return type
 

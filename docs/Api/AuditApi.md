@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getAuditEvent()`
 
 ```php
-getAuditEvent($event_id): \TimecardClient\Model\ListAuditEvents200ResponseItemsInner
+getAuditEvent($eventId): \TimecardClient\Model\ListAuditEvents200ResponseItemsInner
 ```
 
 Read one audit event
@@ -33,10 +33,10 @@ $apiInstance = new TimecardClient\Api\AuditApi(
     new GuzzleHttp\Client(),
     $config
 );
-$event_id = 'event_id_example'; // string
+$eventId = 'eventId_example'; // string
 
 try {
-    $result = $apiInstance->getAuditEvent($event_id);
+    $result = $apiInstance->getAuditEvent($eventId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuditApi->getAuditEvent: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +47,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **event_id** | **string**|  | |
+| **eventId** | **string**|  | |
 
 ### Return type
 
@@ -69,7 +69,7 @@ try {
 ## `listAuditEvents()`
 
 ```php
-listAuditEvents($from, $to, $subject, $issuer_name, $action, $outcome, $resource_type, $resource_id, $person_id, $request_id, $page, $page_size, $format): \TimecardClient\Model\ListAuditEvents200Response
+listAuditEvents($from, $to, $subject, $issuerName, $action, $outcome, $resourceType, $resourceId, $personId, $requestId, $page, $pageSize, $format): \TimecardClient\Model\ListAuditEvents200Response
 ```
 
 Query audit events (JSON or CSV)
@@ -94,19 +94,19 @@ $apiInstance = new TimecardClient\Api\AuditApi(
 $from = NULL; // mixed | start of the period (RFC 3339); defaults to 7 days before `to`
 $to = NULL; // mixed | end of the period (RFC 3339); defaults to now
 $subject = 'subject_example'; // string
-$issuer_name = 'issuer_name_example'; // string
+$issuerName = 'issuerName_example'; // string
 $action = 'action_example'; // string
 $outcome = 'outcome_example'; // string
-$resource_type = 'resource_type_example'; // string
-$resource_id = 'resource_id_example'; // string
-$person_id = 56; // int
-$request_id = 'request_id_example'; // string
+$resourceType = 'resourceType_example'; // string
+$resourceId = 'resourceId_example'; // string
+$personId = 56; // int
+$requestId = 'requestId_example'; // string
 $page = 1; // int
-$page_size = 100; // int
+$pageSize = 100; // int
 $format = 'json'; // string | csv returns text/csv with one line per event
 
 try {
-    $result = $apiInstance->listAuditEvents($from, $to, $subject, $issuer_name, $action, $outcome, $resource_type, $resource_id, $person_id, $request_id, $page, $page_size, $format);
+    $result = $apiInstance->listAuditEvents($from, $to, $subject, $issuerName, $action, $outcome, $resourceType, $resourceId, $personId, $requestId, $page, $pageSize, $format);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuditApi->listAuditEvents: ', $e->getMessage(), PHP_EOL;
@@ -120,15 +120,15 @@ try {
 | **from** | [**mixed**](../Model/.md)| start of the period (RFC 3339); defaults to 7 days before &#x60;to&#x60; | [optional] |
 | **to** | [**mixed**](../Model/.md)| end of the period (RFC 3339); defaults to now | [optional] |
 | **subject** | **string**|  | [optional] |
-| **issuer_name** | **string**|  | [optional] |
+| **issuerName** | **string**|  | [optional] |
 | **action** | **string**|  | [optional] |
 | **outcome** | **string**|  | [optional] |
-| **resource_type** | **string**|  | [optional] |
-| **resource_id** | **string**|  | [optional] |
-| **person_id** | **int**|  | [optional] |
-| **request_id** | **string**|  | [optional] |
+| **resourceType** | **string**|  | [optional] |
+| **resourceId** | **string**|  | [optional] |
+| **personId** | **int**|  | [optional] |
+| **requestId** | **string**|  | [optional] |
 | **page** | **int**|  | [optional] [default to 1] |
-| **page_size** | **int**|  | [optional] [default to 100] |
+| **pageSize** | **int**|  | [optional] [default to 100] |
 | **format** | **string**| csv returns text/csv with one line per event | [optional] [default to &#39;json&#39;] |
 
 ### Return type
