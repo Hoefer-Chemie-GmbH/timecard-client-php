@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **hasTimeRecordingProfile** | **bool** |  |
 **isActive** | **bool** |  |
 **isUsed** | **bool** |  |
-**freeFields** | [**\TimecardClient\Model\CreatePerson201ResponseFreeFieldsInner[]**](CreatePerson201ResponseFreeFieldsInner.md) |  |
+**freeFields** | [**\TimecardClient\Model\GetPerson200ResponseFreeFieldsInner[]**](GetPerson200ResponseFreeFieldsInner.md) |  |
 **timeRecording** | [**\TimecardClient\Model\GetDepartment200ResponseTimeRecording**](GetDepartment200ResponseTimeRecording.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

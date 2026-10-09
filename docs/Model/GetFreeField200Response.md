@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **isActive** | **bool** |  |
 **orderNo** | **int** |  |
 **dataType** | **string** |  |
-**lookup** | [**\TimecardClient\Model\CreatePerson201ResponseFreeFieldsInnerLookupInner[]**](CreatePerson201ResponseFreeFieldsInnerLookupInner.md) |  |
+**lookup** | [**\TimecardClient\Model\GetPerson200ResponseFreeFieldsInnerLookupInner[]**](GetPerson200ResponseFreeFieldsInnerLookupInner.md) |  |
 **isUsed** | **bool** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

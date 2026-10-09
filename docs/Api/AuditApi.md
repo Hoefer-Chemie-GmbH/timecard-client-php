@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getAuditEvent()`
 
 ```php
-getAuditEvent($eventId): \TimecardClient\Model\ListAuditEvents200ResponseItemsInner
+getAuditEvent($eventId): \TimecardClient\Model\GetAuditEvent200Response
 ```
 
 Read one audit event
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\TimecardClient\Model\ListAuditEvents200ResponseItemsInner**](../Model/ListAuditEvents200ResponseItemsInner.md)
+[**\TimecardClient\Model\GetAuditEvent200Response**](../Model/GetAuditEvent200Response.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -142,7 +142,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

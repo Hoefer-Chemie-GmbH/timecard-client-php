@@ -1,7 +1,7 @@
 {
   "name": "timecard/client",
   "description": "PHP client for a timeCard REST facade, generated from its OpenAPI specification",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "library",
   "license": "proprietary",
   "require": {

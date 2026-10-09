@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **personId** | **int** |  |
 **publicHolidays** | [**\TimecardClient\Model\GetPersonCalendar200ResponsePublicHolidaysInner[]**](GetPersonCalendar200ResponsePublicHolidaysInner.md) |  |
-**absentDays** | [**\TimecardClient\Model\GetPersonCalendar200ResponsePublicHolidaysInner[]**](GetPersonCalendar200ResponsePublicHolidaysInner.md) |  |
+**absentDays** | [**\TimecardClient\Model\GetPersonCalendar200ResponseAbsentDaysInner[]**](GetPersonCalendar200ResponseAbsentDaysInner.md) |  |
 **sickDays** | [**\TimecardClient\Model\GetPersonCalendar200ResponseSickDays**](GetPersonCalendar200ResponseSickDays.md) |  |
 **inconsistentDays** | **string[]** |  |
 **missingBookingDays** | **string[]** |  |

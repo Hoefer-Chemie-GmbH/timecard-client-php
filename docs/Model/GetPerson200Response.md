@@ -20,8 +20,8 @@ Name | Type | Description | Notes
 **isEmployee** | **bool** |  |
 **isAccessControlPerson** | **bool** |  |
 **useLicence** | **bool** |  |
-**modules** | [**\TimecardClient\Model\CreatePerson201ResponseModules**](CreatePerson201ResponseModules.md) |  |
-**freeLicences** | [**\TimecardClient\Model\CreatePerson201ResponseFreeLicences**](CreatePerson201ResponseFreeLicences.md) |  |
+**modules** | [**\TimecardClient\Model\GetPerson200ResponseModules**](GetPerson200ResponseModules.md) |  |
+**freeLicences** | [**\TimecardClient\Model\GetPerson200ResponseFreeLicences**](GetPerson200ResponseFreeLicences.md) |  |
 **isTimecardUser** | **bool** |  |
 **username** | **string** |  |
 **isAccountLocked** | **bool** |  |
@@ -37,11 +37,11 @@ Name | Type | Description | Notes
 **noBookingImagesAllowed** | **bool** |  |
 **gpsTrackingRequired** | **bool** |  |
 **regionId** | **int** |  |
-**auPeriodDays** | [**\TimecardClient\Model\CreatePerson201ResponseAuPeriodDays**](CreatePerson201ResponseAuPeriodDays.md) |  |
+**auPeriodDays** | [**\TimecardClient\Model\GetPerson200ResponseAuPeriodDays**](GetPerson200ResponseAuPeriodDays.md) |  |
 **applicationGroupId** | **int** |  |
 **hasBookings** | **bool** |  |
-**externalLogins** | [**\TimecardClient\Model\CreatePerson201ResponseExternalLogins**](CreatePerson201ResponseExternalLogins.md) |  |
-**freeFields** | [**\TimecardClient\Model\CreatePerson201ResponseFreeFieldsInner[]**](CreatePerson201ResponseFreeFieldsInner.md) |  |
-**timeRecording** | [**\TimecardClient\Model\CreatePerson201ResponseTimeRecording**](CreatePerson201ResponseTimeRecording.md) |  |
+**externalLogins** | [**\TimecardClient\Model\GetPerson200ResponseExternalLogins**](GetPerson200ResponseExternalLogins.md) |  |
+**freeFields** | [**\TimecardClient\Model\GetPerson200ResponseFreeFieldsInner[]**](GetPerson200ResponseFreeFieldsInner.md) |  |
+**timeRecording** | [**\TimecardClient\Model\GetPerson200ResponseTimeRecording**](GetPerson200ResponseTimeRecording.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

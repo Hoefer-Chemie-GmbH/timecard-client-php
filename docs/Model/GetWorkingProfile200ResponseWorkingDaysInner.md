@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **targetTime** | **string** |  |
 **sequently** | **bool** |  |
 **coreTime** | [**\TimecardClient\Model\GetWorkingProfile200ResponseWorkingDaysInnerCoreTime**](GetWorkingProfile200ResponseWorkingDaysInnerCoreTime.md) |  |
-**coreTime2** | [**\TimecardClient\Model\GetWorkingProfile200ResponseWorkingDaysInnerCoreTime**](GetWorkingProfile200ResponseWorkingDaysInnerCoreTime.md) |  |
-**permittedTime** | [**\TimecardClient\Model\GetWorkingProfile200ResponseWorkingDaysInnerCoreTime**](GetWorkingProfile200ResponseWorkingDaysInnerCoreTime.md) |  |
-**evaluatedTime** | [**\TimecardClient\Model\GetWorkingProfile200ResponseWorkingDaysInnerCoreTime**](GetWorkingProfile200ResponseWorkingDaysInnerCoreTime.md) |  |
+**coreTime2** | [**\TimecardClient\Model\GetWorkingProfile200ResponseWorkingDaysInnerCoreTime2**](GetWorkingProfile200ResponseWorkingDaysInnerCoreTime2.md) |  |
+**permittedTime** | [**\TimecardClient\Model\GetWorkingProfile200ResponseWorkingDaysInnerCoreTime2**](GetWorkingProfile200ResponseWorkingDaysInnerCoreTime2.md) |  |
+**evaluatedTime** | [**\TimecardClient\Model\GetWorkingProfile200ResponseWorkingDaysInnerCoreTime2**](GetWorkingProfile200ResponseWorkingDaysInnerCoreTime2.md) |  |
 **breakRuleIds** | **int[]** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
