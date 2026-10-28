@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **subject** | **string** |  |
 **displayName** | **string** |  |
 **scopes** | **string[]** |  |
+**departments** | **string[]** |  |
 **tokenExpiresAt** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
