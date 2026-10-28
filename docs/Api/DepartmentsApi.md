@@ -6,7 +6,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | ------------- | ------------- | ------------- |
 | [**getDepartment()**](DepartmentsApi.md#getDepartment) | **GET** /v1/departments/{departmentId} | Department details |
 | [**listDepartmentMembers()**](DepartmentsApi.md#listDepartmentMembers) | **GET** /v1/departments/{departmentId}/members | Members as of today (without the leader unless the leader is a member) |
-| [**listDepartments()**](DepartmentsApi.md#listDepartments) | **GET** /v1/departments | Departments |
+| [**listDepartments()**](DepartmentsApi.md#listDepartments) | **GET** /v1/departments | Departments (also with presence:status or availability:read; limited to the departments of the account) |
 
 
 ## `getDepartment()`
@@ -131,7 +131,7 @@ try {
 listDepartments(): \TimecardClient\Model\ListDepartments200Response
 ```
 
-Departments
+Departments (also with presence:status or availability:read; limited to the departments of the account)
 
 ### Example
 

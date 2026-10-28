@@ -66,7 +66,7 @@ This endpoint does not need any parameter.
 ## `listPresenceStatus()`
 
 ```php
-listPresenceStatus(): \TimecardClient\Model\ListPresenceStatus200Response
+listPresenceStatus($department): \TimecardClient\Model\ListPresenceStatus200Response
 ```
 
 Presence status of all employees: person id and PRESENT or ABSENT only (an absence with a reason is ABSENT; no names, no reasons)
@@ -88,9 +88,10 @@ $apiInstance = new TimecardClient\Api\PresenceApi(
     new GuzzleHttp\Client(),
     $config
 );
+$department = array('department_example'); // string[] | department name as in timeCard (see GET /v1/departments), repeatable; only persons of these departments
 
 try {
-    $result = $apiInstance->listPresenceStatus();
+    $result = $apiInstance->listPresenceStatus($department);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PresenceApi->listPresenceStatus: ', $e->getMessage(), PHP_EOL;
@@ -99,7 +100,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **department** | [**string[]**](../Model/string.md)| department name as in timeCard (see GET /v1/departments), repeatable; only persons of these departments | [optional] |
 
 ### Return type
 
