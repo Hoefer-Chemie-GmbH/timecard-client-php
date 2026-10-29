@@ -4,7 +4,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**listAvailability()**](AvailabilityApi.md#listAvailability) | **GET** /v1/availability | Availability of all employees per day (at most 92 days): AVAILABLE, PARTIALLY_AVAILABLE, UNAVAILABLE or UNKNOWN, without names, reasons or times |
+| [**listAvailability()**](AvailabilityApi.md#listAvailability) | **GET** /v1/availability | Availability of all employees per day (at most 92 days): person id, personnel number and AVAILABLE, PARTIALLY_AVAILABLE, UNAVAILABLE or UNKNOWN, without names, reasons or times |
 
 
 ## `listAvailability()`
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 listAvailability($from, $to, $department): \TimecardClient\Model\ListAvailability200Response
 ```
 
-Availability of all employees per day (at most 92 days): AVAILABLE, PARTIALLY_AVAILABLE, UNAVAILABLE or UNKNOWN, without names, reasons or times
+Availability of all employees per day (at most 92 days): person id, personnel number and AVAILABLE, PARTIALLY_AVAILABLE, UNAVAILABLE or UNKNOWN, without names, reasons or times
 
 ### Example
 

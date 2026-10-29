@@ -5,7 +5,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**listPresence()**](PresenceApi.md#listPresence) | **GET** /v1/presence | Presence status of all employees (presence display) |
-| [**listPresenceStatus()**](PresenceApi.md#listPresenceStatus) | **GET** /v1/presence/status | Presence status of all employees: person id and PRESENT or ABSENT only (an absence with a reason is ABSENT; no names, no reasons) |
+| [**listPresenceStatus()**](PresenceApi.md#listPresenceStatus) | **GET** /v1/presence/status | Presence status of all employees: person id, personnel number and PRESENT or ABSENT only (an absence with a reason is ABSENT; no names, no reasons) |
 
 
 ## `listPresence()`
@@ -69,7 +69,7 @@ This endpoint does not need any parameter.
 listPresenceStatus($department): \TimecardClient\Model\ListPresenceStatus200Response
 ```
 
-Presence status of all employees: person id and PRESENT or ABSENT only (an absence with a reason is ABSENT; no names, no reasons)
+Presence status of all employees: person id, personnel number and PRESENT or ABSENT only (an absence with a reason is ABSENT; no names, no reasons)
 
 ### Example
 
