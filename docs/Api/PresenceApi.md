@@ -6,6 +6,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | ------------- | ------------- | ------------- |
 | [**listPresence()**](PresenceApi.md#listPresence) | **GET** /v1/presence | Presence status of all employees (presence display) |
 | [**listPresenceStatus()**](PresenceApi.md#listPresenceStatus) | **GET** /v1/presence/status | Presence status of all employees: person id, personnel number and PRESENT or ABSENT only (an absence with a reason is ABSENT; no names, no reasons) |
+| [**lookupPresence()**](PresenceApi.md#lookupPresence) | **POST** /v1/presence/lookup | Presence of the requested persons: person id and PRESENT or ABSENT only (an absence with a reason is ABSENT). A person that timeCard does not return is missing from the answer. |
 
 
 ## `listPresence()`
@@ -115,6 +116,64 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`, `application/problem+json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `lookupPresence()`
+
+```php
+lookupPresence($lookupPresenceRequest): \TimecardClient\Model\LookupPresence200Response
+```
+
+Presence of the requested persons: person id and PRESENT or ABSENT only (an absence with a reason is ABSENT). A person that timeCard does not return is missing from the answer.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerJwt
+$config = TimecardClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new TimecardClient\Api\PresenceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$lookupPresenceRequest = new \TimecardClient\Model\LookupPresenceRequest(); // \TimecardClient\Model\LookupPresenceRequest
+
+try {
+    $result = $apiInstance->lookupPresence($lookupPresenceRequest);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PresenceApi->lookupPresence: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **lookupPresenceRequest** | [**\TimecardClient\Model\LookupPresenceRequest**](../Model/LookupPresenceRequest.md)|  | |
+
+### Return type
+
+[**\TimecardClient\Model\LookupPresence200Response**](../Model/LookupPresence200Response.md)
+
+### Authorization
+
+[bearerJwt](../../README.md#bearerJwt)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`, `application/problem+json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
